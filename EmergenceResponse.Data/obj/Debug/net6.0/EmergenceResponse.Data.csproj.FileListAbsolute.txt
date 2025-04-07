@@ -1,0 +1,34 @@
+C:\Users\Windows Pc\source\repos\EmergenceResponse\EmergenceResponse.Data\bin\Debug\net6.0\EmergenceResponse.Data.deps.json
+C:\Users\Windows Pc\source\repos\EmergenceResponse\EmergenceResponse.Data\bin\Debug\net6.0\EmergenceResponse.Data.dll
+C:\Users\Windows Pc\source\repos\EmergenceResponse\EmergenceResponse.Data\bin\Debug\net6.0\EmergenceResponse.Data.pdb
+C:\Users\Windows Pc\source\repos\EmergenceResponse\EmergenceResponse.Data\bin\Debug\net6.0\EmergenceResponse.Lib.dll
+C:\Users\Windows Pc\source\repos\EmergenceResponse\EmergenceResponse.Data\bin\Debug\net6.0\EmergenceResponse.Lib.pdb
+C:\Users\Windows Pc\source\repos\EmergenceResponse\EmergenceResponse.Data\obj\Debug\net6.0\EmergenceResponse.Data.csproj.AssemblyReference.cache
+C:\Users\Windows Pc\source\repos\EmergenceResponse\EmergenceResponse.Data\obj\Debug\net6.0\EmergenceResponse.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Windows Pc\source\repos\EmergenceResponse\EmergenceResponse.Data\obj\Debug\net6.0\EmergenceResponse.Data.AssemblyInfoInputs.cache
+C:\Users\Windows Pc\source\repos\EmergenceResponse\EmergenceResponse.Data\obj\Debug\net6.0\EmergenceResponse.Data.AssemblyInfo.cs
+C:\Users\Windows Pc\source\repos\EmergenceResponse\EmergenceResponse.Data\obj\Debug\net6.0\EmergenceResponse.Data.csproj.CoreCompileInputs.cache
+C:\Users\Windows Pc\source\repos\EmergenceResponse\EmergenceResponse.Data\obj\Debug\net6.0\EmergenceResponse.Data.csproj.CopyComplete
+C:\Users\Windows Pc\source\repos\EmergenceResponse\EmergenceResponse.Data\obj\Debug\net6.0\EmergenceResponse.Data.dll
+C:\Users\Windows Pc\source\repos\EmergenceResponse\EmergenceResponse.Data\obj\Debug\net6.0\refint\EmergenceResponse.Data.dll
+C:\Users\Windows Pc\source\repos\EmergenceResponse\EmergenceResponse.Data\obj\Debug\net6.0\EmergenceResponse.Data.pdb
+C:\Users\Windows Pc\source\repos\EmergenceResponse\EmergenceResponse.Data\obj\Debug\net6.0\ref\EmergenceResponse.Data.dll
+C:\Users\Windows Pc\source\repos\EmergenceResponse\EmergenceResponse.Data\bin\Debug\net6.0\EmergenceResponse.Data.runtimeconfig.json
+C:\Users\Windows Pc\source\repos\EmergenceResponse\EmergenceResponse.Data\obj\Debug\net6.0\EmergenceResponse.Data.genruntimeconfig.cache
+C:\Users\godkn\Documents\GitHub\EmergenceResponse\EmergenceResponse.Data\bin\Debug\net6.0\EmergenceResponse.Data.deps.json
+C:\Users\godkn\Documents\GitHub\EmergenceResponse\EmergenceResponse.Data\bin\Debug\net6.0\EmergenceResponse.Data.runtimeconfig.json
+C:\Users\godkn\Documents\GitHub\EmergenceResponse\EmergenceResponse.Data\bin\Debug\net6.0\EmergenceResponse.Data.dll
+C:\Users\godkn\Documents\GitHub\EmergenceResponse\EmergenceResponse.Data\bin\Debug\net6.0\EmergenceResponse.Data.pdb
+C:\Users\godkn\Documents\GitHub\EmergenceResponse\EmergenceResponse.Data\bin\Debug\net6.0\EmergenceResponse.Lib.dll
+C:\Users\godkn\Documents\GitHub\EmergenceResponse\EmergenceResponse.Data\bin\Debug\net6.0\EmergenceResponse.Lib.pdb
+C:\Users\godkn\Documents\GitHub\EmergenceResponse\EmergenceResponse.Data\obj\Debug\net6.0\EmergenceResponse.Data.csproj.AssemblyReference.cache
+C:\Users\godkn\Documents\GitHub\EmergenceResponse\EmergenceResponse.Data\obj\Debug\net6.0\EmergenceResponse.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\godkn\Documents\GitHub\EmergenceResponse\EmergenceResponse.Data\obj\Debug\net6.0\EmergenceResponse.Data.AssemblyInfoInputs.cache
+C:\Users\godkn\Documents\GitHub\EmergenceResponse\EmergenceResponse.Data\obj\Debug\net6.0\EmergenceResponse.Data.AssemblyInfo.cs
+C:\Users\godkn\Documents\GitHub\EmergenceResponse\EmergenceResponse.Data\obj\Debug\net6.0\EmergenceResponse.Data.csproj.CoreCompileInputs.cache
+C:\Users\godkn\Documents\GitHub\EmergenceResponse\EmergenceResponse.Data\obj\Debug\net6.0\Emergenc.29A2926F.Up2Date
+C:\Users\godkn\Documents\GitHub\EmergenceResponse\EmergenceResponse.Data\obj\Debug\net6.0\EmergenceResponse.Data.dll
+C:\Users\godkn\Documents\GitHub\EmergenceResponse\EmergenceResponse.Data\obj\Debug\net6.0\refint\EmergenceResponse.Data.dll
+C:\Users\godkn\Documents\GitHub\EmergenceResponse\EmergenceResponse.Data\obj\Debug\net6.0\EmergenceResponse.Data.pdb
+C:\Users\godkn\Documents\GitHub\EmergenceResponse\EmergenceResponse.Data\obj\Debug\net6.0\EmergenceResponse.Data.genruntimeconfig.cache
+C:\Users\godkn\Documents\GitHub\EmergenceResponse\EmergenceResponse.Data\obj\Debug\net6.0\ref\EmergenceResponse.Data.dll

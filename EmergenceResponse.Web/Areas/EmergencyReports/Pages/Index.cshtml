@@ -1,0 +1,34 @@
+﻿@page
+@model IndexModel
+@section breadcrumb {
+    <a class="breadcrumb-item" asp-page=".">Emergencies</a>  
+}
+@if(Model.CurrentUser.MemberId != null){
+    @section action{
+        <a asp-page="Add" class="btn btn-primary"><i class="fa fa-add"></i> Report now..</a>
+    }
+}
+
+<table class="table table-sm table-striped table-hover mt-2 border-bottom border-top">
+    <tr>
+        <th>Date</th>
+        <th>Created by</th>
+        <th>Category</th>
+        <th>Status</th>
+        <th>Service provider</th>
+    </tr>
+    @foreach(var item in @Model.List)
+    {
+        <tr>
+            <td><a asp-page="Details" asp-route-id="@item.Id">@item.CreationDate</a></td>
+            <td>@item.Creator.Name</td>
+            <td>@item.Type</td>
+            <td class="small">@item.Status.ToEnumString()</td>
+            <td>@item.ServiceProvider?.Name</td>
+        </tr>       
+    }                 
+</table>
+
+@if(Model.CurrentUser.MemberId != null){
+    @section Sidebar{}
+}

@@ -1,0 +1,1 @@
+﻿scaffold-dbcontext "Host=localhost;Database=EmergenceDb;Username=postgres;Password=Godknows" Npgsql.EntityFrameworkCore.PostgreSQL -namespace EmergenceResponse.Data -project EmergenceResponse.Data -outputdir Entities -force

@@ -1,0 +1,353 @@
+﻿@page
+
+@model AddModel
+
+
+<div class="container py-3">
+    <h1 class="text-center mb-4">Emergency Report</h1>
+    <div class="call-container text-center">
+        <button id="callButton" class="btn btn-primary">📞 Call Admin</button>
+        <button id="endCallButton" class="btn btn-danger" style="display:none;">🔴 End Call</button>
+    </div>
+
+    <div class="video-container mt-3 d-flex justify-content-center">
+        <video id="localVideo" autoplay muted playsinline class="border rounded"></video>
+        <video id="remoteVideo" autoplay playsinline class="border rounded ms-3"></video>
+    </div>
+
+    <audio id="remoteAudio" autoplay></audio>
+    <div class="row">
+        <div class="col-md-6">
+            <div id="map" style="height: 500px"></div>
+        </div>
+        <div class="col-md-6">
+            <form method="post">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md">
+                                <div class="mb-3">
+                                <label for="location" class="form-label">Longitude:</label>
+                                <input asp-for="Location.Longitude" class="form-control" id="longitude" required>
+                                </div>
+                            </div>
+                            <div class="col-md">
+                                <div class="mb-3">
+                                <label for="location" class="form-label">Latitude:</label>
+                                <input asp-for="Location.Latitude" class="form-control" id="latitude" required>
+                                </div>
+                            </div>
+                        </div>            
+                        <div class="row">
+                            <div class="col-md">
+                                <div class="mb-3">
+                                    <label for="location" class="form-label">City:</label>
+                                    <input asp-for="Location.City" class="form-control" id="city" required>
+                                    </div>
+                         
+                            </div>
+                            <div class="col-md">
+                                <label for="description" class="form-label">Emergency:</label>
+
+                                <select asp-for="Emergency.TypeId" class="form-select" asp-items="@Html.GetListItems<EmergencyType>()">
+                                    @if (Model.EType == null)
+                                    {
+                                        <option value="" disabled selected>Select type...</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="@((int) Model.EType)" selected>@Model.EType.ToEnumString()</option>
+                                    }
+
+                                </select>
+                                <span asp-validation-for="Emergency.TypeId" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="col-md">
+                                <div class="mb-3">
+                                    <label for="location" class="form-label">Address:</label>
+                                    <textarea asp-for="Location.Address" class="form-control" rows="2" required></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="description" class="form-label">Description:</label>
+                            <textarea asp-for="Emergency.Description" class="form-control" id="description" rows="4" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Record Emergency Report:</label>
+                            <div class="record-container d-flex align-items-center p-2 border rounded">
+                                <div id="recordIcon" class="p-2">
+                                    <i class="fa-solid fa-microphone"></i>
+                                </div>
+                                <div class="flex-grow-1 px-2">
+                                    <span id="recordStatus" class="text-muted">Press to Record</span>
+                                    <div id="waveform" class="waveform-container" style="height: 30px;"></div>
+                                </div>
+                                <button type="button" id="startRecording" class="btn btn-outline-primary rounded-circle">
+                                    <i class="fa-solid fa-play"></i>
+                                </button>
+                                <button type="button" id="stopRecording" class="btn btn-outline-danger rounded-circle mx-2" disabled>
+                                    <i class="fa-solid fa-stop"></i>
+                                </button>
+                            </div>
+                            <audio id="audioPlayback" controls class="mt-2" style="display:none; width: 100%;"></audio>
+                            <input type="hidden" id="audioData" name="audioData">
+                        </div>
+
+                    </div>
+                    <div class="card-footer text-end">
+                        <button type="submit" class="btn btn-success text-end">Submit Report</button>
+                    </div>
+                </div> 
+            </form>
+        </div>     
+    </div>
+</div>
+
+@section Scripts{
+   @* <script>
+        navigator.geolocation.getCurrentPosition(position => {
+            const { latitude, longitude } = position.coords;
+            map.innerHTML = '<iframe width="700" height="300" src="https://maps.google.com/maps?q='+latitude+','+longitude+'&amp;z=15&amp;output=embed"></iframe>'
+        });
+    </script>*@
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/3.1.7/signalr.min.js"></script>
+    <script>
+           const callButton = document.getElementById("callButton");
+        const endCallButton = document.getElementById("endCallButton");
+        const localVideo = document.getElementById("localVideo");
+        const remoteVideo = document.getElementById("remoteVideo");
+
+        const connection = new signalR.HubConnectionBuilder()
+            .withUrl("/callHub")
+            .build();
+
+        connection.start().catch(err => console.error("SignalR Connection Error:", err));
+
+        let localStream;
+        let remoteStream;
+        let peerConnection;
+
+        const config = {
+            iceServers: [{ urls: "stun:stun.l.google.com:19302" }]
+        };
+
+        async function startWebRTC() {
+            try {
+                localStream = await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
+                localVideo.srcObject = localStream;
+
+                peerConnection = new RTCPeerConnection(config);
+                remoteStream = new MediaStream();
+                remoteVideo.srcObject = remoteStream;
+
+                localStream.getTracks().forEach(track => peerConnection.addTrack(track, localStream));
+
+                peerConnection.ontrack = event => {
+                    event.streams[0].getTracks().forEach(track => remoteStream.addTrack(track));
+                };
+
+                peerConnection.onicecandidate = event => {
+                    if (event.candidate) {
+                        connection.invoke("SendIceCandidate", "adminUserId", JSON.stringify(event.candidate));
+                    }
+                };
+            } catch (error) {
+                console.error("WebRTC Error:", error);
+            }
+        }
+
+        callButton.addEventListener("click", async () => {
+            await startWebRTC();
+            callButton.style.display = "none";
+            endCallButton.style.display = "block";
+
+            const offer = await peerConnection.createOffer();
+            await peerConnection.setLocalDescription(offer);
+            connection.invoke("SendOffer", "adminUserId", JSON.stringify(offer));
+        });
+
+        connection.on("ReceiveCall", async (callerId) => {
+            if (confirm("Incoming Video Call. Accept?")) {
+                connection.invoke("AcceptCall", callerId);
+                await startWebRTC();
+            }
+        });
+
+        connection.on("CallAccepted", async () => {
+            console.log("Call Accepted");
+        });
+
+        connection.on("ReceiveOffer", async (offer) => {
+            await startWebRTC();
+            await peerConnection.setRemoteDescription(new RTCSessionDescription(JSON.parse(offer)));
+
+            const answer = await peerConnection.createAnswer();
+            await peerConnection.setLocalDescription(answer);
+            connection.invoke("SendAnswer", "adminUserId", JSON.stringify(answer));
+        });
+
+        connection.on("ReceiveAnswer", async (answer) => {
+            await peerConnection.setRemoteDescription(new RTCSessionDescription(JSON.parse(answer)));
+        });
+
+        connection.on("ReceiveIceCandidate", async (candidate) => {
+            await peerConnection.addIceCandidate(new RTCIceCandidate(JSON.parse(candidate)));
+        });
+
+        endCallButton.addEventListener("click", () => {
+            connection.invoke("EndCall", "adminUserId");
+            endWebRTC();
+        });
+
+        connection.on("CallEnded", () => {
+            endWebRTC();
+        });
+
+        function endWebRTC() {
+            if (peerConnection) peerConnection.close();
+            if (localStream) localStream.getTracks().forEach(track => track.stop());
+
+            localVideo.srcObject = null;
+            remoteVideo.srcObject = null;
+
+            callButton.style.display = "block";
+            endCallButton.style.display = "none";
+        }
+
+        let mediaRecorder;
+        let audioChunks = [];
+
+        document.getElementById("startRecording").addEventListener("click", async function () {
+            const recordStatus = document.getElementById("recordStatus");
+            const startButton = document.getElementById("startRecording");
+            const stopButton = document.getElementById("stopRecording");
+
+            const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+            mediaRecorder = new MediaRecorder(stream);
+
+            mediaRecorder.onstart = function () {
+                audioChunks = [];
+                recordStatus.textContent = "Recording...";
+                startButton.disabled = true;
+                stopButton.disabled = false;
+            };
+
+            mediaRecorder.ondataavailable = function (event) {
+                audioChunks.push(event.data);
+            };
+
+            mediaRecorder.onstop = function () {
+                const audioBlob = new Blob(audioChunks, { type: "audio/wav" });
+                const audioUrl = URL.createObjectURL(audioBlob);
+                const audioPlayback = document.getElementById("audioPlayback");
+
+                audioPlayback.src = audioUrl;
+                audioPlayback.style.display = "block";
+                document.getElementById("audioData").value = audioBlob;
+
+                recordStatus.textContent = "Recording Stopped";
+                startButton.disabled = false;
+                stopButton.disabled = true;
+            };
+
+            mediaRecorder.start();
+        });
+
+        document.getElementById("stopRecording").addEventListener("click", function () {
+            if (mediaRecorder) {
+                mediaRecorder.stop();
+            }
+        });
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: 0, lng: 0},
+                zoom: 15
+            });
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    var pos = {
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude
+                    }; 
+
+                    $('#longitude').val(pos.lng);
+                    $('#latitude').val(pos.lat);
+                    getCityName(pos.lat, pos.lng);
+
+                    var marker = new google.maps.Marker({
+                        position: pos,
+                        map: map,
+                        title: 'Current Location'
+                    });
+                    map.setCenter(pos);
+                }, function() {
+                    handleLocationError(true, infoWindow, map.getCenter());
+                });
+            } else {
+                handleLocationError(false, infoWindow, map.getCenter());
+            }
+        }
+
+        function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+            infoWindow.setPosition(pos);
+            infoWindow.setContent(browserHasGeolocation ?
+                                  'Error: The Geolocation service failed.' :
+                                  'Error: Your browser doesn\'t support geolocation.');
+            infoWindow.open(map);
+        }
+
+        function getCityName(lat, lng) {
+          var geocoder = new google.maps.Geocoder();
+          var latlng = new google.maps.LatLng(lat, lng);
+          geocoder.geocode({'latLng': latlng}, function(results, status) {
+            if (status == google.maps.GeocoderStatus.OK) {
+              if (results[0]) {
+                for (var i = 0; i < results[0].address_components.length; i++) {
+                  var component = results[0].address_components[i];
+                  if (component.types.indexOf('locality') > -1) {
+                    var cityName = component.long_name;
+                    console.log(cityName);
+                    $('#city').val(cityName);
+                    return cityName;
+                  }
+                }
+              } else {
+                console.log('No results found');
+              }
+            } else {
+              console.log('Geocoder failed due to: ' + status);
+            }
+          });
+        }
+
+        function getDistance(origin, destination) {
+          var service = new google.maps.DistanceMatrixService();
+          service.getDistanceMatrix({
+            origins: [origin],
+            destinations: [destination],
+            travelMode: google.maps.TravelMode.DRIVING,
+            unitSystem: google.maps.UnitSystem.METRIC,
+            avoidHighways: false,
+            avoidTolls: false
+          }, function(response, status) {
+            if (status == google.maps.DistanceMatrixStatus.OK && response.rows[0].elements[0].status != "ZERO_RESULTS") {
+              var distance = response.rows[0].elements[0].distance.text;
+              console.log(distance);
+              return distance;
+            } else {
+              console.log("Unable to calculate distance.");
+            }
+          });
+        }
+
+
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap"></script>
+
+}
+
+

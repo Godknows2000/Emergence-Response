@@ -1,0 +1,53 @@
+﻿@page
+@model DirectionModel
+@section breadcrumb {
+    <a class="breadcrumb-item" asp-page="Index">Emergency</a>
+    <a class="breadcrumb-item" asp-page="Details" asp-route-id="@Model.Emergency.Id">@Model.Emergency.CreationDate</a>
+    <a class="breadcrumb-item" asp-page=".">Directions</a>
+}
+<div id="map" style="height: 500px; width: 100%;}"></div>
+
+<div id="org-lat" class="">@Model.Emergency.ServiceProvider.Location.Latitude</div>
+<div id="org-long" class="">@Model.Emergency.ServiceProvider.Location.Longitude</div>
+<div id="dest-lat" class="">@Model.Emergency.Location.Latitude</div>
+<div id="dest-long" class="">@Model.Emergency.Location.Longitude</div>
+
+
+@section Scripts{
+    
+     <script>
+        function initMap() {
+          const directionsService = new google.maps.DirectionsService();
+          const directionsRenderer = new google.maps.DirectionsRenderer();
+          const map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 7,
+            center: { lat: 41.85, lng: -87.65 },
+          });
+          directionsRenderer.setMap(map);
+
+        var start_lat = parseFloat(document.getElementById('org-lat').innerText);
+        var start_long = parseFloat(parseFloat(document.getElementById('org-long').innerText));
+        var end_lat = parseFloat(document.getElementById('dest-lat').innerText);
+        var end_long = parseFloat(parseFloat(document.getElementById('dest-long').innerText));
+
+            console.log(start_lat, start_long, end_lat, end_long);
+
+          const start = new google.maps.LatLng(start_lat, start_long);
+          const end = new google.maps.LatLng(end_lat, end_long);
+
+          const request = {
+            origin: start,
+            destination: end,
+            travelMode: google.maps.TravelMode.DRIVING
+          };
+
+          directionsService.route(request, function(result, status) {
+            if (status == google.maps.DirectionsStatus.OK) {
+              directionsRenderer.setDirections(result);
+            }
+          });
+        }
+  </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap"
+    async defer></script>
+}

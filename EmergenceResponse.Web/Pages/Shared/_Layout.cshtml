@@ -1,0 +1,298 @@
+﻿@using X.PagedList
+@using X.PagedList.Web.Common
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Emergence Response</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <link href="~/lib/select2/css/select2.css" rel="stylesheet" />
+    <link href="~/lib/jqueryui/jquery-ui.css" rel="stylesheet" />
+    <link href="~/lib/select2-bootstrap/select2-bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/lib/font-awesome/css/all.min.css" asp-append-version="true" />
+    <link href="~/css/test.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" asp-append-version="true" />
+    @RenderSection("Styles", required: false)
+</head>
+<body>
+    <header>
+        <!-- Bootstrap NavBar -->
+        <nav class="navbar navbar-expand-md navbar-light fixed-top" style="background: #2C3D90;">
+            <div class="container-fluid">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" asp-page="/Index">
+                    <img src="~/images/logo.png" width="30" height="30" class="d-inline-block align-top" alt="logo">
+                    <span id="nav-brand" class="d-none d-lg-inline text-white">Emergence Response</span>
+                </a>
+
+
+                <div class="navbar-collapse collapse d-sm-inline-flex">
+                     @if (User.Identity.IsAuthenticated && Model.CurrentUser.MemberId != null)
+                    {
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link text-white-50" asp-area="" asp-page="/Index">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white-50" asp-area="EmergencyReports" asp-page="/Index">Reports</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white-50" asp-area="" asp-page="/Index">Locations</a>
+                            </li>
+
+                        </ul>
+                    } else{
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link text-white-50" asp-area="" asp-page="/Index">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white-50" asp-area="" asp-page="/Index">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white-50" asp-area="" asp-page="/Index">How It Works</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white-50" asp-area="" asp-page="/Index">Contact</a>
+                            </li>
+                        </ul>
+                    }
+
+                    
+                    <partial name="_LoginPartial" />
+
+                </div>
+            </div>
+            
+
+            <!--<div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">-->
+            <!-- This menu is hidden in bigger devices with d-sm-none.
+            The sidebar isn't proper for smaller screens imo, so this dropdown menu can keep all the useful sidebar itens exclusively for smaller screens  -->
+            <!--<li class="nav-item dropdown d-sm-block d-md-none">
+                <a class="nav-link dropdown-toggle" href="#" id="smallerscreenmenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Menu
+                </a>
+                <div class="dropdown-menu" aria-labelledby="smallerscreenmenu">
+                    <a class="dropdown-item" href="#">Dashboard</a>
+                    <a class="dropdown-item" href="#">Profile</a>
+                    <a class="dropdown-item" href="#">Tasks</a>
+                    <a class="dropdown-item" href="#">Etc ...</a>
+                </div>
+            </li>-->
+            <!-- Smaller devices menu END -->
+            <!--</ul>
+            </div>-->
+        </nav>
+        <!-- NavBar END -->
+    </header>
+
+
+
+
+
+    <!--Sidebar-->
+    <div class="wrapper">
+        @if (User.Identity.IsAuthenticated)
+        {
+             @if (Model.CurrentUser.MemberId == null && Model.CurrentUser.ServiceProviderId == null)
+            {
+                <div id="sidebar-container" class="sidebar-expanded d-none d-md-block">         
+                    <partial name="Sidebar/_SysUser" />
+                </div>              
+            }
+            @if(Model.CurrentUser.ServiceProviderId != null)
+            {
+                <div id="sidebar-container" class="sidebar-expanded d-none d-md-block">         
+                    <partial name="Sidebar/_ServiceProvider" />
+                </div> 
+            }
+        }
+        <div id="container">
+
+            @if (IsSectionDefined("sidebar"))
+            {
+                @if (ViewData["SearchPlaceholder"] != null || IsSectionDefined("breadcrumb"))
+                {
+                    <div class="navbar navbar-expand-sm p-0" style="background-color: #e3e3e3">
+                        <div class="navbar-collapse collapse" id="navbarSupportedContent">
+                            <div class="mr-auto"><div class="breadcrumb py-2 ps-3 m-0 small" style="background: none !important">@RenderSection("breadcrumb", false)</div></div>
+                            @if (ViewData["SearchPlaceholder"] != null)
+                            {
+                                <div style="max-width:200px" class="mx-3 py-1">
+                                    <form method="get">
+                                        <div class="input-group input-group-sm">
+                                            <input type="search" placeholder="@ViewData["SearchPlaceholder"]" name="q" value="@ViewData["QueryString"]" class="form-control" />
+                                            <div class="input-group-append"><button class="btn btn-outline-secondary"><i class="fa fa-search"></i></button></div>
+                                        </div>
+                                    </form>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                }
+                <main role="main">
+                    <div class="row d-print-none ms-3">
+                        <div class="col">
+                            <div class="navbar navbar-expand-lg px-0">
+                                @if (@ViewData["PageTitle"] != null)
+                                {
+                                    <h3>@ViewData["PageTitle"]</h3>}
+                                @if (IsSectionDefined("action"))
+                                {
+                                    <div class="ms-auto" style="">@RenderSection("action", false)</div>
+                                }
+                            </div>
+                            @if (ViewData["DateFiltersCaption"] != null)
+                            {
+                                <partial name="_DateFilters" />}
+                            <div class="d-print-block">@RenderBody()</div>
+                        </div>
+                        <div class="col-3 border-light px-0 bg-light border-left pr-1" style="min-height: 100vh;">@RenderSection("sidebar", false)</div>
+                    </div>
+                </main>
+            }
+            else
+            {
+                @if (ViewData["SearchPlaceholder"] != null || IsSectionDefined("breadcrumb"))
+                {
+                    <div class="navbar navbar-expand-sm p-0" style="background-color: #e3e3e3">
+                        <div class="navbar-collapse collapse" id="navbarSupportedContent">
+                            <div class="me-auto"><div class="breadcrumb py-2 ps-3 m-0 small" style="background: none !important">@RenderSection("breadcrumb", false)</div></div>
+                            @if (ViewData["SearchPlaceholder"] != null)
+                            {
+                                <div style="max-width:200px" class="mx-3 py-1">
+                                    <form method="get">
+                                        <div class="input-group input-group-sm">
+                                            <input type="search" placeholder="@ViewData["SearchPlaceholder"]" name="q" value="@ViewData["QueryString"]" class="form-control" />
+                                            <div class="input-group-append"><button class="btn btn-outline-secondary"><i class="fa fa-search"></i></button></div>
+                                        </div>
+                                    </form>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                }
+                <div id="main">
+
+                    <main role="main" class="m-3">
+                        <div class="d-print-none">
+                            <div class="navbar navbar-expand-lg px-0">
+                                @if (@ViewData["PageTitle"] != null)
+                                {
+                                    <h3>@ViewData["PageTitle"]</h3>
+                                }
+                                @if (IsSectionDefined("action"))
+                                {
+                                    <div class="ms-auto" style="">@RenderSection("action", required: false)</div>
+                                }
+                            </div>
+                            
+                        </div>
+
+                        <div class="d-print-block">@RenderBody()</div>
+                       @* @if (Model.GetType().BaseType.IsGenericType
+&& Model.GetType().BaseType.GetGenericTypeDefinition().IsAssignableFrom(typeof(SysListPageModel<>)))
+                        {
+                            @Html.PagedListPager((IPagedList)Model.List, p => Url.Query(new { p, q = Model.QueryString }),
+            new PagedListRenderOptionsBase { Display = PagedListDisplayMode.IfNeeded, LiElementClasses = new string[] { "page-item" }, PageClasses = new string[] { "page-link", "border-secondary" } })
+                        }
+*@
+
+                    </main>
+                </div>
+            }
+
+
+
+        </div>
+
+
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; @DateTime.Now.Year - Emergence Response - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="~/lib/font-awesome/js/all.min.js" asp-append-version="true"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/script.js" asp-append-version="true"></script>
+    <script src="~/lib/knockout/knockout-latest.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="~/lib/select2/js/select2.js"></script>
+    <script src="~/lib/jqueryui/jquery-ui.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-latest.js"></script>
+    <script type="text/javascript">
+        // Hide submenus
+        $('#body-row .collapse').collapse('hide');
+        $(".select2").select2({
+            theme: 'bootstrap',
+            width: 'auto',
+            dropdownAutoWidth: false,
+        });
+        // Collapse/Expand icon
+        $('#collapse-icon').addClass('fa-angle-double-left');
+
+        // Collapse click
+        $('[data-toggle=sidebar-colapse]').click(function () {
+            SidebarCollapse();
+        });
+
+        function SidebarCollapse() {
+            $('.sidebar-submenu').toggleClass('d-none');
+            $('.submenu-icon').toggleClass('d-none');
+            $('#sidebar-container').toggleClass('sidebar-expanded sidebar-collapsed');
+
+            // Treating d-flex/d-none on separators with title
+            var SeparatorTitle = $('.sidebar-separator-title');
+            if (SeparatorTitle.hasClass('d-flex')) {
+                SeparatorTitle.removeClass('d-flex');
+            } else {
+                SeparatorTitle.addClass('d-flex');
+            }
+
+
+            // Collapse/Expand icon
+            $('#collapse-icon').toggleClass('fa-angle-double-left fa-angle-double-right');
+            //Select 2
+
+        }
+        $(".select2-minres").select2({
+            theme: 'bootstrap',
+            minimumResultsForSearch: 5,
+            width: 'auto',
+            dropdownAutoWidth: false,
+        });
+
+        $(".datepickernonext").datepicker({
+            maxDate: 0,
+            yearRange: "c-100:c+100",
+        });
+        $(".datepicker").datepicker({
+            changeYear: true,
+            changeMonth: true,
+            dateFormat: "yy-mm-dd",
+            yearRange: "c-100:c+100",
+            showButtonPanel: true,
+        });
+
+
+
+    </script>
+
+    @RenderSection("Scripts", required: false)
+
+</body>
+</html>
+

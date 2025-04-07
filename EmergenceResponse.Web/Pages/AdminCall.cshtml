@@ -1,0 +1,106 @@
+﻿@page
+@model AdminCallModel
+
+<div class="container py-3">
+    <h1 class="text-center">Admin Call Center</h1>
+    <div class="text-center">
+        <button id="answerButton" class="btn btn-success" style="display:none;">✅ Answer Call</button>
+        <button id="endCallButton" class="btn btn-danger" style="display:none;">🔴 End Call</button>
+    </div>
+
+    <div class="video-container mt-3 d-flex justify-content-center">
+        <video id="localVideo" autoplay muted playsinline class="border rounded"></video>
+        <video id="remoteVideo" autoplay playsinline class="border rounded ms-3"></video>
+    </div>
+
+    <audio id="incomingCallSound" src="incoming_call.mp3" preload="auto"></audio>
+</div>
+
+@section Scripts {
+<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/3.1.7/signalr.min.js"></script>
+
+<script>
+    const answerButton = document.getElementById("answerButton");
+    const endCallButton = document.getElementById("endCallButton");
+    const localVideo = document.getElementById("localVideo");
+    const remoteVideo = document.getElementById("remoteVideo");
+    const incomingCallSound = document.getElementById("incomingCallSound");
+
+    const connection = new signalR.HubConnectionBuilder()
+        .withUrl("/Models/callHub")
+        .build();
+
+    connection.start().catch(err => console.error("SignalR Error:", err));
+
+    let localStream;
+    let remoteStream;
+    let peerConnection;
+
+    const config = { iceServers: [{ urls: "stun:stun.l.google.com:19302" }] };
+
+    async function startWebRTC() {
+        try {
+            localStream = await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
+            localVideo.srcObject = localStream;
+
+            peerConnection = new RTCPeerConnection(config);
+            remoteStream = new MediaStream();
+            remoteVideo.srcObject = remoteStream;
+
+            localStream.getTracks().forEach(track => peerConnection.addTrack(track, localStream));
+
+            peerConnection.ontrack = event => {
+                event.streams[0].getTracks().forEach(track => remoteStream.addTrack(track));
+            };
+
+            peerConnection.onicecandidate = event => {
+                if (event.candidate) {
+                    connection.invoke("SendIceCandidate", "callerUserId", JSON.stringify(event.candidate));
+                }
+            };
+        } catch (error) {
+            console.error("WebRTC Error:", error);
+        }
+    }
+
+    connection.on("ReceiveCall", async (callerId) => {
+        incomingCallSound.play();  // Play sound when call is incoming
+        answerButton.style.display = "block";
+        answerButton.onclick = async () => {
+            await startWebRTC();
+            answerButton.style.display = "none";
+            endCallButton.style.display = "block";
+            connection.invoke("AcceptCall", callerId);
+        };
+    });
+
+    connection.on("ReceiveOffer", async (offer) => {
+        await startWebRTC();
+        await peerConnection.setRemoteDescription(new RTCSessionDescription(JSON.parse(offer)));
+
+        const answer = await peerConnection.createAnswer();
+        await peerConnection.setLocalDescription(answer);
+        connection.invoke("SendAnswer", "callerUserId", JSON.stringify(answer));
+    });
+
+    connection.on("ReceiveIceCandidate", async (candidate) => {
+        await peerConnection.addIceCandidate(new RTCIceCandidate(JSON.parse(candidate)));
+    });
+
+    endCallButton.addEventListener("click", () => {
+        connection.invoke("EndCall", "callerUserId");
+        endWebRTC();
+    });
+
+    function endWebRTC() {
+        if (peerConnection) peerConnection.close();
+        if (localStream) localStream.getTracks().forEach(track => track.stop());
+
+        localVideo.srcObject = null;
+        remoteVideo.srcObject = null;
+
+        answerButton.style.display = "none";
+        endCallButton.style.display = "none";
+    }
+</script>
+}

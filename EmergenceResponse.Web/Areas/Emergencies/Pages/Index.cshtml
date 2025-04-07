@@ -1,0 +1,45 @@
+﻿@page
+@model EmergenceResponse.Web.Areas.Emergencies.Pages.IndexModel
+
+@section actionbar{
+    <div>
+        <a asp-page="Add" class="btn btn-outline-primary"><i class="fa fa-plus"></i> Add emergency</a>
+    </div>
+}
+
+@if (!string.IsNullOrWhiteSpace(Model.QueryString))
+{
+    <div class="row">
+        <p><i class="fa fa-search"></i> You searched for "<b>@Model.QueryString</b>" <a asp-page="index" class="btn btn-outline-secondary btn-sm">Clear search</a></p>
+    </div>
+}
+<h4 class="font-weight-light"><strong>@Model.List.TotalItemCount</strong> Emergenc@(Model.List.TotalItemCount == 1 ? "y" : "ies") @(Model.QueryString != null ? "found" : "")</h4>
+<table class="table table-striped table-hover table-sm border-bottom border-top">
+    <thead>
+        <tr>
+            
+            <th>Name</th>
+            <th>Creation Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (!Model.List.Any())
+        {
+            <tr>
+                <td colspan="3">No emergences available</td>
+            </tr>
+        }
+        else
+        {
+            @foreach (var item in Model.List)
+            {
+                <tr>
+                    
+                    <td>@item.Description</td>
+                    <td>@item.CreationDate.ToString("dd-MMM-yyyy HH:mm")</td>
+                </tr>
+            }
+        }
+
+    </tbody>
+</table>

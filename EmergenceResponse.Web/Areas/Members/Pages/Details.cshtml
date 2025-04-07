@@ -1,0 +1,43 @@
+﻿@page
+@model DetailsModel
+
+@section breadcrumb {
+    <a class="breadcrumb-item" asp-page="Index">Members</a>
+    <a class="breadcrumb-item" asp-page=".">@Model.Member.Name</a>
+}
+
+<div class="container">
+    <div class="row">
+    <div class="col-md-12">
+        <div class="card shadow">
+            <div class="card-body">
+                
+                <div class="row mb-3">
+                    <label class="col-md-3 text-muted">Name</label>
+                    <div class="col-md-9"><div class="label-value">@Model.Member.Name</div></div>
+                </div>
+                <div class="row mb-3">
+                    <label class="col-md-3 text-muted">Phone</label>
+                    <div class="col-md-9"><div class="label-value">@Model.Member.Phone</div></div>
+                </div>
+                <div class="row mb-3">
+                    <label class="col-md-3 text-muted">Email</label>
+                    <div class="col-md-9"><div class="label-value">@Model.Member.Email</div></div>
+                </div>
+                
+            </div>
+            <div class="card-footer small text-muted">
+                <div class="">Creation date</div>
+                <div class="">@Model.Member.CreationDate</div>
+            </div>
+        </div> 
+        
+    </div>
+</div>
+</div>
+
+
+@section sidebar{
+
+}
+

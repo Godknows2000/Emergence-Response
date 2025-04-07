@@ -1,0 +1,122 @@
+﻿@{ var area = ViewContext.RouteData.Values["area"]?.ToString().ToLower();
+    var page = ViewContext.RouteData.Values["page"]?.ToString().ToLower();
+}
+
+
+<!-- Bootstrap List Group -->
+<ul class="list-group"> 
+     <!-- Emergences -->
+        <li>
+            <div class="sidebar-menu">
+                <a asp-area="" asp-page="/Index">
+                    <div class="sidebar-items-positioning">
+                        <span class="iconspace"><i class="fa-solid fa-chart-line"></i></span>
+                        <span class="menu-collapsed">Dashboard</span>
+                    </div>
+                </a>
+            </div>
+
+        </li>
+
+     <!-- Emergences -->
+        <li>
+            <div class="sidebar-menu">
+                <a asp-area="EmergencyReports" asp-page="/Index">
+                    <div class="sidebar-items-positioning">
+                        <span class="iconspace"><i class="fa-solid fa-tower-broadcast"></i></span>
+                        <span class="menu-collapsed">Emergences</span>
+                    </div>
+                </a>
+            </div>
+
+        </li>
+
+        <!-- Members -->
+        <li>
+            <div class="sidebar-menu">
+                <a asp-area="Members" asp-page="/Index">
+                    <div class="sidebar-items-positioning">
+                        <span class="fa fa-user fa-fw iconspace"></span>
+                        <span class="menu-collapsed">Members</span>
+                    </div>
+                </a>
+            </div>
+        </li>
+        <!-- Services providers -->
+        <li>
+            <div class="sidebar-menu">
+                <a asp-area="ServiceProviders" asp-page="Index">
+                    <div class="sidebar-items-positioning">
+                        <span class="iconspace"><i class="fas fa-hand-holding-usd"></i></span>
+                        <span class="menu-collapsed">Service Providers</span>
+                    </div>
+                </a>
+            </div>
+        </li>
+ 
+ 
+        <li>
+            <div class="sidebar-menu">
+                <a href="#submenuconfig" data-toggle="collapse" aria-expanded="false" class="dropdown-button">
+                    <div class="sidebar-items-positioning">
+                        <span class="iconspace"><i class="fas fa-cogs"></i></span>
+                        <span class="menu-collapsed">Settings</span>
+                        <span class="submenu-icon "></span>
+                    </div>
+                </a>
+            </div>
+
+
+
+            <!-- Submenu content -->
+            <div id="submenuconfig" class="collapse sidebar-submenu-level1">
+
+                <a href="#submenusystem" data-toggle="collapse" aria-expanded="false" class="dropdown-button">
+                    <div class="sidebar-items-positioning">
+                        System Config<span class="submenu-icon "></span>
+                    </div>
+
+                </a>
+
+                <div id="submenusystem" class="collapse sidebar-submenu-level2">
+                    <a asp-area="Config" asp-page="/Countries/Index" class="">
+                        <span class="menu-collapsed text-dark">Contries</span>
+                    </a>
+
+
+                    <a asp-area="Config" asp-page="/Users/Index">Users</a>
+                    <a asp-area="Config" asp-page="/UserGroups/Index">User Groups</a>
+                    <a asp-area="Config" asp-page="/AgeGroups/Index">Age Groups</a>
+                    <a asp-area="Config" asp-page="/Incidents/Index">Incidents</a>
+                    <a asp-area="Config" asp-page="/Cycles/Index">Cycles</a>
+                </div>
+
+
+                <a href="#submenupayments" data-toggle="collapse" aria-expanded="false" class=" dropdown-button">
+                    <div class="sidebar-items-positioning">
+                        Payment Config<span class="submenu-icon"></span>
+                    </div>
+                </a>
+
+
+                <div id="submenupayments" class="collapse sidebar-submenu-level2">
+                    <a asp-area="Config" asp-page="/Currencies/Index">Currencies</a>
+                    <a asp-area="Config" asp-page="/ExchangeRates/Index">Exchange rates</a>
+                    <a asp-area="Config" asp-page="/PaymentMethods/Index">Payement methods</a>
+                    <a asp-area="Config" asp-page="/Banks/Index" asp-route-id="">Banks</a>
+
+                </div>
+
+            </div>
+
+
+
+        </li>
+    
+    <!-- Config -->
+
+
+
+</ul>
+<!-- List Group END-->
+<!-- sidebar-container END -->

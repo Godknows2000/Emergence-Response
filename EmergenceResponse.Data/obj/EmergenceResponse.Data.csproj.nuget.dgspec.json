@@ -1,0 +1,162 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Data\\EmergenceResponse.Data.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Data\\EmergenceResponse.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Data\\EmergenceResponse.Data.csproj",
+        "projectName": "EmergenceResponse.Data",
+        "projectPath": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Data\\EmergenceResponse.Data.csproj",
+        "packagesPath": "C:\\Users\\godkn\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\godkn\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {},
+          "https://wcyber.pkgs.visualstudio.com/_packaging/wCyberServices/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Lib\\EmergenceResponse.Lib.csproj": {
+                "projectPath": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Lib\\EmergenceResponse.Lib.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.2, )"
+            },
+            "Microsoft.Extensions.Configuration.UserSecrets": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            },
+            "wCyber.Helpers.Identity": {
+              "target": "Package",
+              "version": "[1.5.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Lib\\EmergenceResponse.Lib.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Lib\\EmergenceResponse.Lib.csproj",
+        "projectName": "EmergenceResponse.Lib",
+        "projectPath": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Lib\\EmergenceResponse.Lib.csproj",
+        "packagesPath": "C:\\Users\\godkn\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Lib\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\godkn\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {},
+          "https://wcyber.pkgs.visualstudio.com/_packaging/wCyberServices/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.103\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,103 @@
+﻿@page
+@using EmergenceResponse.Lib
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+@if (User.Identity.IsAuthenticated)
+{
+    <div class="container">
+    
+    <div class="row">
+        <div class="offset-md-1 col-md-10">
+            @if(Model.CurrentUser.MemberId != null)
+            {
+                <div class="row mb-3">
+        
+                <div class="col-md-6">
+                    <div id="police_card" class="card shadow emergency">
+                        <div class="card-body">
+                            <h4 class="text-white">Police</h4>
+                            <p class="text-white">Report to police</p>
+                            <a asp-area="EmergencyReports" asp-page="/Add" asp-route-etype="@EmergencyType.POLICE" class="btn btn-danger">Report now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div id="accident_card" class="card shadow emergency">
+                        <div class="card-body">
+                            <h4>Ambulance</h4>
+                            <p>Get an ambulance</p>
+                            <a asp-area="EmergencyReports" asp-page="/Add" asp-route-etype="@EmergencyType.AMBULANCE" class="btn btn-danger">Report now</a>
+                        </div>
+                    </div>
+                </div>
+       
+            </div>
+            <div class="row mb-3">
+                 <div class="col-md-6">
+                    <div id="fire_card" class="card shadow emergency">
+                        <div class="card-body">
+                            <h4 class="text-white">Fire outbreak</h4>
+                           <p class="text-white">Report fire outbreak</p>
+                            <a asp-area="EmergencyReports" asp-page="/Add" asp-route-etype="@EmergencyType.FIRE_OUTBREAK" class="btn btn-danger">Report now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card shadow bg-warning emergency">
+                        <div class="card-body">
+                            <h4>Other emergencies</h4>
+                            <p class="text-white">Report other different emergencies</p>
+                            <a asp-area="EmergencyReports" asp-page="/Add" asp-route-etype="@EmergencyType.OTHER" class="btn btn-primary">Report now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            }
+                
+        @if (User.Identity.IsAuthenticated && Model.CurrentUser.MemberId != null)
+        {
+            <div class="card shadow">
+                <div class="d-flex">
+                    <h5 class="mt-2 ms-2">Recent reports...</h5>
+                    <div class="ms-auto pe-3 pt-2">
+                        <a asp-area="EmergencyReports" asp-page="Index" class="">View all..</a>
+                    </div>
+                    
+                </div>
+            
+            <table class="table">
+                <tr>
+                    <th>Date</th>
+                    <th>Category</th>
+                    <th>Description</th>
+                    <th>Status</th>
+                    <th>Service provider</th>
+                </tr>
+                @foreach(var item in Model.Emergencies)
+                {
+                    <tr>
+                        <td>@item.CreationDate</td>
+                        <td>@item.Type</td>
+                        <td>@item.Description</td>
+                        <td>@item.Status</td>
+                        <td>@item.ServiceProvider?.Name</td>
+                    </tr>       
+                }
+                           
+                   
+            </table>
+        </div>
+        }
+            
+        </div>
+    </div>
+</div>
+}
+else{
+    <partial name="_AnonymousView" />
+}
+
+

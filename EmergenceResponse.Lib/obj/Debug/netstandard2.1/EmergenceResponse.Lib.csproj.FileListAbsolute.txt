@@ -1,0 +1,19 @@
+C:\Users\Windows Pc\source\repos\EmergenceResponse\EmergenceResponse.Lib\bin\Debug\netstandard2.1\EmergenceResponse.Lib.deps.json
+C:\Users\Windows Pc\source\repos\EmergenceResponse\EmergenceResponse.Lib\bin\Debug\netstandard2.1\EmergenceResponse.Lib.dll
+C:\Users\Windows Pc\source\repos\EmergenceResponse\EmergenceResponse.Lib\bin\Debug\netstandard2.1\EmergenceResponse.Lib.pdb
+C:\Users\Windows Pc\source\repos\EmergenceResponse\EmergenceResponse.Lib\obj\Debug\netstandard2.1\EmergenceResponse.Lib.csproj.AssemblyReference.cache
+C:\Users\Windows Pc\source\repos\EmergenceResponse\EmergenceResponse.Lib\obj\Debug\netstandard2.1\EmergenceResponse.Lib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Windows Pc\source\repos\EmergenceResponse\EmergenceResponse.Lib\obj\Debug\netstandard2.1\EmergenceResponse.Lib.AssemblyInfoInputs.cache
+C:\Users\Windows Pc\source\repos\EmergenceResponse\EmergenceResponse.Lib\obj\Debug\netstandard2.1\EmergenceResponse.Lib.AssemblyInfo.cs
+C:\Users\Windows Pc\source\repos\EmergenceResponse\EmergenceResponse.Lib\obj\Debug\netstandard2.1\EmergenceResponse.Lib.csproj.CoreCompileInputs.cache
+C:\Users\Windows Pc\source\repos\EmergenceResponse\EmergenceResponse.Lib\obj\Debug\netstandard2.1\EmergenceResponse.Lib.dll
+C:\Users\Windows Pc\source\repos\EmergenceResponse\EmergenceResponse.Lib\obj\Debug\netstandard2.1\EmergenceResponse.Lib.pdb
+C:\Users\godkn\Documents\GitHub\EmergenceResponse\EmergenceResponse.Lib\bin\Debug\netstandard2.1\EmergenceResponse.Lib.deps.json
+C:\Users\godkn\Documents\GitHub\EmergenceResponse\EmergenceResponse.Lib\bin\Debug\netstandard2.1\EmergenceResponse.Lib.dll
+C:\Users\godkn\Documents\GitHub\EmergenceResponse\EmergenceResponse.Lib\bin\Debug\netstandard2.1\EmergenceResponse.Lib.pdb
+C:\Users\godkn\Documents\GitHub\EmergenceResponse\EmergenceResponse.Lib\obj\Debug\netstandard2.1\EmergenceResponse.Lib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\godkn\Documents\GitHub\EmergenceResponse\EmergenceResponse.Lib\obj\Debug\netstandard2.1\EmergenceResponse.Lib.AssemblyInfoInputs.cache
+C:\Users\godkn\Documents\GitHub\EmergenceResponse\EmergenceResponse.Lib\obj\Debug\netstandard2.1\EmergenceResponse.Lib.AssemblyInfo.cs
+C:\Users\godkn\Documents\GitHub\EmergenceResponse\EmergenceResponse.Lib\obj\Debug\netstandard2.1\EmergenceResponse.Lib.csproj.CoreCompileInputs.cache
+C:\Users\godkn\Documents\GitHub\EmergenceResponse\EmergenceResponse.Lib\obj\Debug\netstandard2.1\EmergenceResponse.Lib.dll
+C:\Users\godkn\Documents\GitHub\EmergenceResponse\EmergenceResponse.Lib\obj\Debug\netstandard2.1\EmergenceResponse.Lib.pdb

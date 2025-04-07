@@ -1,0 +1,39 @@
+﻿@page
+@model IndexModel
+
+@section breadcrumb {
+    <a class="breadcrumb-item" asp-page="Index">Members</a>
+}
+
+@if (!string.IsNullOrWhiteSpace(Model.QueryString))
+{   
+    <p style="color: forestgreen;"><i class="fa fa-search"></i> You searched for "<b>@Model.QueryString</b>" <a asp-page="index" class="btn btn-outline-secondary btn-sm">Clear search</a></p>   
+}
+<h5 class="font-weight-light"><strong>@Model.List.TotalItemCount</strong> Member@(Model.List.TotalItemCount == 1 ? "" : "s") @(Model.QueryString != null ? "found" : "")</h5>
+
+<table class="table table-sm table-striped table-hover mt-2 border-bottom border-top">
+    <tbody>
+        <tr>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Email</th>
+            
+        </tr>
+        @if (Model.List.Count == 0)
+        {
+            <tr><td colspan="3">No members available</td> </tr>
+        }
+        else
+        {
+            @foreach (var item in Model.List)
+            {
+                <tr>
+                    <td> <a asp-page="Details" asp-route-id="@item.Id">@item.Name</a></td>
+                    <td>@item.Phone</td>
+                    <td><span class="status-circle bg-primary"></span> @item.Email</td>
+                   
+                </tr>
+            }
+        }
+    </tbody>
+</table>

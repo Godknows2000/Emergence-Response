@@ -1,0 +1,76 @@
+﻿@page
+@model DetailsModel
+
+@if(@Model.CurrentUser.ServiceProviderId == null)
+{
+    @section breadcrumb {
+    <a class="breadcrumb-item" asp-page="Index">Service providers</a>
+    <a class="breadcrumb-item" asp-page=".">@Model.ServiceProvider.Name</a>
+}
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card shadow">
+            <div class="card-body">
+
+                <div class="row mb-3">
+                    <label class="col-md-3 text-muted">Name</label>
+                    <div class="col-md-9"><div class="label-value">@Model.ServiceProvider.Name</div></div>
+                </div>
+                <div class="row mb-3">
+                    <label class="col-md-3 text-muted">Email</label>
+                    <div class="col-md-9"><div class="label-value">@Model.ServiceProvider.Email</div></div>
+                </div>
+                <div class="row mb-3">
+                    <label class="col-md-3 text-muted">Description</label>
+                    <div class="col-md-9"><div class="label-value">@Model.ServiceProvider.Description</div></div>
+                </div>
+                <div class="row mb-3">
+                    <label class="col-md-3 text-muted">Status</label>
+                    <div class="col-md-9">
+                        <div class="label-value">@Model.ServiceProvider.Status.ToEnumString()</div>
+                    </div>
+                </div>
+                @if (Model.ServiceProvider.Status == ServiceProviderStatus.AWAITING_ACTIVATION)
+                {
+                    <div class="row mb-3">
+                        <label class="col-md-3 text-muted">Activation link</label>
+                        <div class="col-md-9">
+
+                            <div class="input-group">
+                                <span class="input-group-text" id="basic-addon3">Copy link</span>
+                                <input type="text" class="form-control" value="@($"https://localhost:7283/Identity/Account/Activate?code={Model.ServiceProvider.Id}")">
+                            </div>
+                        </div>
+                    </div>
+                }
+
+                <div class="row mb-3">
+                    <label class="col-md-3 text-muted">Emergency type</label>
+                    <div class="col-md-9"><div class="label-value">@Model.ServiceProvider.Type</div></div>
+                </div>
+                <div class="row mb-3">
+                    <label class="col-md-3 text-muted">Address</label>
+                    <div class="col-md-9"><div class="label-value">@Model.ServiceProvider.Location.Address</div></div>
+                </div>
+                <div class="row mb-3">
+                    <label class="col-md-3 text-muted">City</label>
+                    <div class="col-md-9"><div class="label-value">@Model.ServiceProvider.Location.City</div></div>
+                </div>
+
+            </div>
+            <div class="card-footer small text-muted">
+                <div class="">Creation date</div>
+                <div class="">@Model.ServiceProvider.CreationDate</div>
+            </div>
+        </div> 
+        
+    </div>
+</div>
+
+
+@section sidebar{
+
+}
+

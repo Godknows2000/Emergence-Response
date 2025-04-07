@@ -1,0 +1,71 @@
+﻿@page
+@model AddModel
+
+ <div class="card shadow">
+    <div class="card-body">
+        <form method="post">             
+            <div class="col-md">
+                <div class="mb-3">
+                    <label class="form-label">Name:</label>
+                    <input asp-for="ServiceProvider.Name" class="form-control">
+                    <span asp-validation-for="ServiceProvider.Email" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="mb-3">
+                    <label class="form-label">Email:</label>
+                    <input asp-for="ServiceProvider.Email" class="form-control">
+                    <span asp-validation-for="ServiceProvider.Email" class="text-danger"></span>
+                </div>
+            </div>
+             <div class="mb-3">
+                <label class="form-label">Description:</label>
+                <textarea asp-for="ServiceProvider.Description" class="form-control"  rows="3"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="description" class="form-label">Emergency:</label>                  
+                <select asp-for="ServiceProvider.Type" class="form-select" asp-items="@Html.GetListItems<EmergencyType>()">
+                       
+                </select>
+                <span asp-validation-for="ServiceProvider.Type" class="text-danger"></span>
+            </div>
+
+             <div class="row">
+                  <div class="col-md">
+                      <div class="mb-3">
+                        <label for="location" class="form-label">Longitude:</label>
+                        <input asp-for="Location.Longitude" class="form-control" id="longitude" required>
+                      </div>
+                  </div>
+                  <div class="col-md">
+                      <div class="mb-3">
+                        <label for="location" class="form-label">Latitude:</label>
+                        <input asp-for="Location.Latitude" class="form-control" id="latitude" required>
+                      </div>
+                  </div>
+              </div>            
+                <div class="row">
+                    <div class="col-md">
+                        <div class="mb-3">
+                            <label for="location" class="form-label">City:</label>
+                            <input asp-for="Location.City" class="form-control" id="city" required>
+                          </div>
+                         
+                    </div>
+                    <div class="col-md">
+                         <div class="mb-3">
+                            <label for="location" class="form-label">Address:</label>
+                            <textarea asp-for="Location.Address" class="form-control" rows="2" required></textarea>
+                          </div>
+                    </div>
+                </div>
+   
+            <div class="card-footer text-end">
+                <button type="submit" class="btn btn-success text-end">Submit Report</button>
+            </div>
+              
+        </form>
+    </div>
+</div>
+
+@section sidebar{}

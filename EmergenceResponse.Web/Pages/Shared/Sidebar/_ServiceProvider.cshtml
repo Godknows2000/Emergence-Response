@@ -1,0 +1,52 @@
+﻿@{ var area = ViewContext.RouteData.Values["area"]?.ToString().ToLower();
+    var page = ViewContext.RouteData.Values["page"]?.ToString().ToLower();
+}
+
+
+<!-- Bootstrap List Group -->
+<ul class="list-group"> 
+     <!-- Emergences -->
+        <li>
+            <div class="sidebar-menu">
+                <a asp-area="" asp-page="/Index">
+                    <div class="sidebar-items-positioning">
+                        <span class="iconspace"><i class="fa-solid fa-chart-line"></i></span>
+                        <span class="menu-collapsed">Dashboard</span>
+                    </div>
+                </a>
+            </div>
+        </li>
+
+        <!-- Emergences -->
+        <li>
+            <div class="sidebar-menu">
+                <a asp-area="EmergencyReports" asp-page="Index" asp-route-spId = "@Model.CurrentUser.ServiceProviderId">
+                    <div class="sidebar-items-positioning">
+                        <span class="iconspace"><i class="fa-solid fa-tower-broadcast"></i></span>
+                        <span class="menu-collapsed">Emergences</span>
+                    </div>
+                </a>
+            </div>
+        </li>
+       
+        <!-- Profile -->
+        <li>
+            <div class="sidebar-menu">
+                <a asp-area="ServiceProviders" asp-page="Details" asp-route-id="@Model.CurrentUser.ServiceProviderId">
+                    <div class="sidebar-items-positioning">
+                        <span class="iconspace"><i class="fa-solid fa-user-gear"></i></span>
+                        <span class="menu-collapsed">Profile</span>
+                    </div>
+                </a>
+            </div>
+
+        </li>
+ 
+    
+    <!-- Config -->
+
+
+
+</ul>
+<!-- List Group END-->
+<!-- sidebar-container END -->
