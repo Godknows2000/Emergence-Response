@@ -350,3 +350,4 @@ C:\Users\godkn\Documents\GitHub\EmergenceResponse\EmergenceResponse.Web\bin\Debu
 C:\Users\godkn\Documents\GitHub\EmergenceResponse\EmergenceResponse.Web\bin\Debug\net6.0\System.IO.Pipelines.dll
 C:\Users\godkn\Documents\GitHub\EmergenceResponse\EmergenceResponse.Web\bin\Debug\net6.0\System.Net.WebSockets.WebSocketProtocol.dll
 C:\Users\godkn\Documents\GitHub\EmergenceResponse\EmergenceResponse.Web\bin\Debug\net6.0\System.Threading.Channels.dll
+C:\Users\godkn\Documents\GitHub\EmergenceResponse\EmergenceResponse.Web\obj\Debug\net6.0\EmergenceResponse.Web.sourcelink.json

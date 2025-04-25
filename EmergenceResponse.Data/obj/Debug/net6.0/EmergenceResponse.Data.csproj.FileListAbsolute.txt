@@ -32,3 +32,4 @@ C:\Users\godkn\Documents\GitHub\EmergenceResponse\EmergenceResponse.Data\obj\Deb
 C:\Users\godkn\Documents\GitHub\EmergenceResponse\EmergenceResponse.Data\obj\Debug\net6.0\EmergenceResponse.Data.pdb
 C:\Users\godkn\Documents\GitHub\EmergenceResponse\EmergenceResponse.Data\obj\Debug\net6.0\EmergenceResponse.Data.genruntimeconfig.cache
 C:\Users\godkn\Documents\GitHub\EmergenceResponse\EmergenceResponse.Data\obj\Debug\net6.0\ref\EmergenceResponse.Data.dll
+C:\Users\godkn\Documents\GitHub\EmergenceResponse\EmergenceResponse.Data\obj\Debug\net6.0\EmergenceResponse.Data.sourcelink.json

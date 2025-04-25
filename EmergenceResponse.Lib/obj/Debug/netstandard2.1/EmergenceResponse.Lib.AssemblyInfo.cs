@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EmergenceResponse.Lib")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2b3cc8207bf75c764a31a24e19a73a18369048e2")]
 [assembly: System.Reflection.AssemblyProductAttribute("EmergenceResponse.Lib")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EmergenceResponse.Lib")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -17,3 +17,4 @@ C:\Users\godkn\Documents\GitHub\EmergenceResponse\EmergenceResponse.Lib\obj\Debu
 C:\Users\godkn\Documents\GitHub\EmergenceResponse\EmergenceResponse.Lib\obj\Debug\netstandard2.1\EmergenceResponse.Lib.csproj.CoreCompileInputs.cache
 C:\Users\godkn\Documents\GitHub\EmergenceResponse\EmergenceResponse.Lib\obj\Debug\netstandard2.1\EmergenceResponse.Lib.dll
 C:\Users\godkn\Documents\GitHub\EmergenceResponse\EmergenceResponse.Lib\obj\Debug\netstandard2.1\EmergenceResponse.Lib.pdb
+C:\Users\godkn\Documents\GitHub\EmergenceResponse\EmergenceResponse.Lib\obj\Debug\netstandard2.1\EmergenceResponse.Lib.sourcelink.json
