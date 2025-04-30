@@ -30,13 +30,17 @@
                     <label class="col-md-3 text-muted">Description</label>
                     <div class="col-md-9"><div class="label-value">@Model.Emergency.Description</div></div>
                 </div>
-                @if (Model.Emergency.AudioData != null)
+                @if (Model.Emergency?.AudioData != null && Model.Emergency.AudioData.Length > 0 && !string.IsNullOrEmpty(Model.Emergency.AudioMimeType))
                 {
                     <h5>Audio Report:</h5>
                     <audio controls>
                         <source src="data:@Model.Emergency.AudioMimeType;base64,@Convert.ToBase64String(Model.Emergency.AudioData)" type="@Model.Emergency.AudioMimeType">
                         Your browser does not support the audio element.
                     </audio>
+                }
+                else
+                {
+                    <p>No audio report available.</p>
                 }
                 <div class="row mb-3">
                     <label class="col-md-3 text-muted">Creator</label>

@@ -10,17 +10,17 @@ namespace EmergenceResponse.Data.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.AddColumn<byte[]>(
-                name: "AudioData",
-                table: "Emergency",
-                type: "bytea",
-                nullable: true);
+            //migrationBuilder.AddColumn<byte[]>(
+            //    name: "AudioData",
+            //    table: "Emergency",
+            //    type: "bytea",
+            //    nullable: true);
 
-            migrationBuilder.AddColumn<string>(
-                name: "AudioMimeType",
-                table: "Emergency",
-                type: "text",
-                nullable: true);
+            //migrationBuilder.AddColumn<string>(
+            //    name: "AudioMimeType",
+            //    table: "Emergency",
+            //    type: "text",
+            //    nullable: true);
         }
 
         /// <inheritdoc />

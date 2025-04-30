@@ -25,12 +25,24 @@ namespace EmergenceResponse.Web.Areas.EmergencyReports.Pages
         {
             if (!string.IsNullOrEmpty(audioData))
             {
-                // Convert Base64 to Byte Array
-                byte[] audioBytes = Convert.FromBase64String(audioData.Split(',')[1]);
+                // Check if the data starts with the base64 data URL prefix
+                if (audioData.StartsWith("data:audio/wav;base64,"))
+                {
+                    // Remove the prefix and get the base64 string
+                    string base64Audio = audioData.Substring("data:audio/wav;base64,".Length);
 
-                // Save audio to the database
-                Emergency.AudioData = audioBytes;
-                Emergency.AudioMimeType = "audio/wav"; // Set MIME type
+                    // Convert the base64 string to a byte array
+                    byte[] audioBytes = Convert.FromBase64String(base64Audio);
+
+                    // Save the byte array and MIME type to the database
+                    Emergency.AudioData = audioBytes;
+                    Emergency.AudioMimeType = "audio/wav"; // Set the appropriate MIME type
+                }
+                else
+                {
+                    // Handle invalid or unsupported audio data format
+                    // Log an error or throw an exception as needed
+                }
             }
             Location.Id = Guid.NewGuid();
             Db.Locations.Add(Location);
@@ -49,10 +61,10 @@ namespace EmergenceResponse.Web.Areas.EmergencyReports.Pages
             return Redirect("/Index");
         }
 
-       
+
         public async Task<Data.ServiceProvider> GetDistance(Location origin, Emergency em)
         {
-            var apiKey = "";
+            var apiKey = "YOUR_GOOGLE_MAPS_API_KEY";  // Make sure this is set properly
             var dests = Db.ServiceProviders.Include(c => c.Location).Where(c => c.TypeId == em.TypeId).ToList();
 
             var distances = new List<double>();
@@ -61,14 +73,35 @@ namespace EmergenceResponse.Web.Areas.EmergencyReports.Pages
             {
                 using (var client = new HttpClient())
                 {
-
                     var distanceResponse = await client.GetAsync($"https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins={origin.Latitude},{origin.Longitude}&destinations={dest.Location.Latitude},{dest.Location.Longitude}&key={apiKey}");
                     var distanceContent = await distanceResponse.Content.ReadAsStringAsync();
-                    var distance = JObject.Parse(distanceContent)["rows"][0]["elements"][0]["distance"]["value"];
+                    var jsonResponse = JObject.Parse(distanceContent);
 
-                    distances.Add((double)distance); // Convert meters to miles
+                    var status = jsonResponse["status"].ToString();
+                    if (status != "OK")
+                    {
+                        Console.WriteLine($"Error with Distance Matrix API: {status}");
+                        continue; // Skip this destination if there's an error
+                    }
+
+                    var rows = jsonResponse["rows"];
+                    if (rows == null || rows.Count() == 0 || rows[0]["elements"] == null || rows[0]["elements"].Count() == 0)
+                    {
+                        Console.WriteLine("No valid distance found for this destination.");
+                        continue; // Skip this destination if there's no valid distance
+                    }
+
+                    var distance = rows[0]["elements"][0]["distance"]["value"];
+                    distances.Add((double)distance); // Add the distance value to the list
                 }
             }
+
+            if (distances.Count == 0)
+            {
+                Console.WriteLine("No distances available to compare.");
+                return null;  // Handle the case where no distances were found
+            }
+
             var sp = dests[distances.IndexOf(distances.Min())];
             em.ServiceProviderId = sp.Id;
             em.StatusId = (int)EmergencyStatus.ASSIGNED;
@@ -76,9 +109,9 @@ namespace EmergenceResponse.Web.Areas.EmergencyReports.Pages
             if (await TryUpdateModelAsync(em, nameof(Emergency), c => c.ServiceProviderId, c => c.StatusId))
             {
                 await Db.SaveChangesAsync();
-
             }
-            return sp;           
+
+            return sp;
         }
     }
 }

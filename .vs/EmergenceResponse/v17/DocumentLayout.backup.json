@@ -3,6 +3,30 @@
   "WorkspaceRootPath": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6F207C1C-FD6E-45C8-AA36-574248ED95E7}|EmergenceResponse.Web\\EmergenceResponse.Web.csproj|c:\\users\\godkn\\documents\\github\\emergenceresponse\\emergenceresponse.web\\areas\\emergencyreports\\pages\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6F207C1C-FD6E-45C8-AA36-574248ED95E7}|EmergenceResponse.Web\\EmergenceResponse.Web.csproj|solutionrelative:emergenceresponse.web\\areas\\emergencyreports\\pages\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F207C1C-FD6E-45C8-AA36-574248ED95E7}|EmergenceResponse.Web\\EmergenceResponse.Web.csproj|c:\\users\\godkn\\documents\\github\\emergenceresponse\\emergenceresponse.web\\areas\\emergencyreports\\pages\\details.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F207C1C-FD6E-45C8-AA36-574248ED95E7}|EmergenceResponse.Web\\EmergenceResponse.Web.csproj|solutionrelative:emergenceresponse.web\\areas\\emergencyreports\\pages\\details.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F207C1C-FD6E-45C8-AA36-574248ED95E7}|EmergenceResponse.Web\\EmergenceResponse.Web.csproj|c:\\users\\godkn\\documents\\github\\emergenceresponse\\emergenceresponse.web\\areas\\emergencyreports\\pages\\add.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F207C1C-FD6E-45C8-AA36-574248ED95E7}|EmergenceResponse.Web\\EmergenceResponse.Web.csproj|solutionrelative:emergenceresponse.web\\areas\\emergencyreports\\pages\\add.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F207C1C-FD6E-45C8-AA36-574248ED95E7}|EmergenceResponse.Web\\EmergenceResponse.Web.csproj|c:\\users\\godkn\\documents\\github\\emergenceresponse\\emergenceresponse.web\\areas\\emergencyreports\\pages\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6F207C1C-FD6E-45C8-AA36-574248ED95E7}|EmergenceResponse.Web\\EmergenceResponse.Web.csproj|solutionrelative:emergenceresponse.web\\areas\\emergencyreports\\pages\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF90DFDF-0347-4345-B352-E4B179ECA0E7}|EmergenceResponse.Data\\EmergenceResponse.Data.csproj|c:\\users\\godkn\\documents\\github\\emergenceresponse\\emergenceresponse.data\\migrations\\20250425094051_voice-note-report.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF90DFDF-0347-4345-B352-E4B179ECA0E7}|EmergenceResponse.Data\\EmergenceResponse.Data.csproj|solutionrelative:emergenceresponse.data\\migrations\\20250425094051_voice-note-report.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF90DFDF-0347-4345-B352-E4B179ECA0E7}|EmergenceResponse.Data\\EmergenceResponse.Data.csproj|c:\\users\\godkn\\documents\\github\\emergenceresponse\\emergenceresponse.data\\entities\\emergencecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF90DFDF-0347-4345-B352-E4B179ECA0E7}|EmergenceResponse.Data\\EmergenceResponse.Data.csproj|solutionrelative:emergenceresponse.data\\entities\\emergencecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FF90DFDF-0347-4345-B352-E4B179ECA0E7}|EmergenceResponse.Data\\EmergenceResponse.Data.csproj|c:\\users\\godkn\\documents\\github\\emergenceresponse\\emergenceresponse.data\\entities\\emergencedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FF90DFDF-0347-4345-B352-E4B179ECA0E7}|EmergenceResponse.Data\\EmergenceResponse.Data.csproj|solutionrelative:emergenceresponse.data\\entities\\emergencedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,20 +35,12 @@
       "RelativeMoniker": "D:0:0:{FF90DFDF-0347-4345-B352-E4B179ECA0E7}|EmergenceResponse.Data\\EmergenceResponse.Data.csproj|solutionrelative:emergenceresponse.data\\migrations\\20240829075018_initial.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FF90DFDF-0347-4345-B352-E4B179ECA0E7}|EmergenceResponse.Data\\EmergenceResponse.Data.csproj|c:\\users\\godkn\\documents\\github\\emergenceresponse\\emergenceresponse.data\\entities\\emergencecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FF90DFDF-0347-4345-B352-E4B179ECA0E7}|EmergenceResponse.Data\\EmergenceResponse.Data.csproj|solutionrelative:emergenceresponse.data\\entities\\emergencecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6F207C1C-FD6E-45C8-AA36-574248ED95E7}|EmergenceResponse.Web\\EmergenceResponse.Web.csproj|c:\\users\\godkn\\documents\\github\\emergenceresponse\\emergenceresponse.web\\areas\\emergencies\\pages\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{6F207C1C-FD6E-45C8-AA36-574248ED95E7}|EmergenceResponse.Web\\EmergenceResponse.Web.csproj|solutionrelative:emergenceresponse.web\\areas\\emergencies\\pages\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6F207C1C-FD6E-45C8-AA36-574248ED95E7}|EmergenceResponse.Web\\EmergenceResponse.Web.csproj|c:\\users\\godkn\\documents\\github\\emergenceresponse\\emergenceresponse.web\\areas\\serviceproviders\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{6F207C1C-FD6E-45C8-AA36-574248ED95E7}|EmergenceResponse.Web\\EmergenceResponse.Web.csproj|solutionrelative:emergenceresponse.web\\areas\\serviceproviders\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6F207C1C-FD6E-45C8-AA36-574248ED95E7}|EmergenceResponse.Web\\EmergenceResponse.Web.csproj|c:\\users\\godkn\\documents\\github\\emergenceresponse\\emergenceresponse.web\\areas\\emergencyreports\\pages\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6F207C1C-FD6E-45C8-AA36-574248ED95E7}|EmergenceResponse.Web\\EmergenceResponse.Web.csproj|solutionrelative:emergenceresponse.web\\areas\\emergencyreports\\pages\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6F207C1C-FD6E-45C8-AA36-574248ED95E7}|EmergenceResponse.Web\\EmergenceResponse.Web.csproj|c:\\users\\godkn\\documents\\github\\emergenceresponse\\emergenceresponse.web\\pages\\shared\\sidebar\\_sysuser.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -45,18 +61,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{6F207C1C-FD6E-45C8-AA36-574248ED95E7}|EmergenceResponse.Web\\EmergenceResponse.Web.csproj|c:\\users\\godkn\\documents\\github\\emergenceresponse\\emergenceresponse.web\\models\\customuseridprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6F207C1C-FD6E-45C8-AA36-574248ED95E7}|EmergenceResponse.Web\\EmergenceResponse.Web.csproj|solutionrelative:emergenceresponse.web\\models\\customuseridprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6F207C1C-FD6E-45C8-AA36-574248ED95E7}|EmergenceResponse.Web\\EmergenceResponse.Web.csproj|c:\\users\\godkn\\documents\\github\\emergenceresponse\\emergenceresponse.web\\areas\\emergencyreports\\pages\\add.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F207C1C-FD6E-45C8-AA36-574248ED95E7}|EmergenceResponse.Web\\EmergenceResponse.Web.csproj|solutionrelative:emergenceresponse.web\\areas\\emergencyreports\\pages\\add.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6F207C1C-FD6E-45C8-AA36-574248ED95E7}|EmergenceResponse.Web\\EmergenceResponse.Web.csproj|c:\\users\\godkn\\documents\\github\\emergenceresponse\\emergenceresponse.web\\areas\\emergencyreports\\pages\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6F207C1C-FD6E-45C8-AA36-574248ED95E7}|EmergenceResponse.Web\\EmergenceResponse.Web.csproj|solutionrelative:emergenceresponse.web\\areas\\emergencyreports\\pages\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6F207C1C-FD6E-45C8-AA36-574248ED95E7}|EmergenceResponse.Web\\EmergenceResponse.Web.csproj|c:\\users\\godkn\\documents\\github\\emergenceresponse\\emergenceresponse.web\\areas\\emergencyreports\\pages\\details.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F207C1C-FD6E-45C8-AA36-574248ED95E7}|EmergenceResponse.Web\\EmergenceResponse.Web.csproj|solutionrelative:emergenceresponse.web\\areas\\emergencyreports\\pages\\details.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FF90DFDF-0347-4345-B352-E4B179ECA0E7}|EmergenceResponse.Data\\EmergenceResponse.Data.csproj|c:\\users\\godkn\\documents\\github\\emergenceresponse\\emergenceresponse.data\\entities\\emergency.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -144,20 +148,84 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "20240829075018_initial.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Data\\Migrations\\20240829075018_initial.Designer.cs",
-              "RelativeDocumentMoniker": "EmergenceResponse.Data\\Migrations\\20240829075018_initial.Designer.cs",
-              "ToolTip": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Data\\Migrations\\20240829075018_initial.Designer.cs",
-              "RelativeToolTip": "EmergenceResponse.Data\\Migrations\\20240829075018_initial.Designer.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAUwA0AAAAWAAAAAAAAAA==",
+              "DocumentIndex": 14,
+              "Title": "CustomUserIdProvider.cs",
+              "DocumentMoniker": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Web\\Models\\CustomUserIdProvider.cs",
+              "RelativeDocumentMoniker": "EmergenceResponse.Web\\Models\\CustomUserIdProvider.cs",
+              "ToolTip": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Web\\Models\\CustomUserIdProvider.cs",
+              "RelativeToolTip": "EmergenceResponse.Web\\Models\\CustomUserIdProvider.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T09:39:17.654Z",
+              "WhenOpened": "2025-04-04T07:13:49.719Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EmergenceContext.cs",
+              "DocumentMoniker": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Data\\Entities\\EmergenceContext.cs",
+              "RelativeDocumentMoniker": "EmergenceResponse.Data\\Entities\\EmergenceContext.cs",
+              "ToolTip": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Data\\Entities\\EmergenceContext.cs",
+              "RelativeToolTip": "EmergenceResponse.Data\\Entities\\EmergenceContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAABvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-29T07:27:33.946Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Add.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Web\\Areas\\EmergencyReports\\Pages\\Add.cshtml.cs",
+              "RelativeDocumentMoniker": "EmergenceResponse.Web\\Areas\\EmergencyReports\\Pages\\Add.cshtml.cs",
+              "ToolTip": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Web\\Areas\\EmergencyReports\\Pages\\Add.cshtml.cs",
+              "RelativeToolTip": "EmergenceResponse.Web\\Areas\\EmergencyReports\\Pages\\Add.cshtml.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAIAwwEwAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-29T07:26:07.796Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "Add.cshtml",
+              "DocumentMoniker": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Web\\Areas\\EmergencyReports\\Pages\\Add.cshtml",
+              "RelativeDocumentMoniker": "EmergenceResponse.Web\\Areas\\EmergencyReports\\Pages\\Add.cshtml",
+              "ToolTip": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Web\\Areas\\EmergencyReports\\Pages\\Add.cshtml",
+              "RelativeToolTip": "EmergenceResponse.Web\\Areas\\EmergencyReports\\Pages\\Add.cshtml",
+              "ViewState": "AgIAANoAAAAAAAAAAAAkwAgBAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-29T07:26:07.581Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Web\\Areas\\EmergencyReports\\Pages\\Details.cshtml",
+              "RelativeDocumentMoniker": "EmergenceResponse.Web\\Areas\\EmergencyReports\\Pages\\Details.cshtml",
+              "ToolTip": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Web\\Areas\\EmergencyReports\\Pages\\Details.cshtml",
+              "RelativeToolTip": "EmergenceResponse.Web\\Areas\\EmergencyReports\\Pages\\Details.cshtml",
+              "ViewState": "AgIAADYAAAAAAAAAAAAwwDYAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-29T07:26:07.572Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Details.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Web\\Areas\\EmergencyReports\\Pages\\Details.cshtml.cs",
+              "RelativeDocumentMoniker": "EmergenceResponse.Web\\Areas\\EmergencyReports\\Pages\\Details.cshtml.cs",
+              "ToolTip": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Web\\Areas\\EmergencyReports\\Pages\\Details.cshtml.cs",
+              "RelativeToolTip": "EmergenceResponse.Web\\Areas\\EmergencyReports\\Pages\\Details.cshtml.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAgwA0AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-29T07:26:07.478Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "Add.cshtml",
               "DocumentMoniker": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Web\\Areas\\Emergencies\\Pages\\Add.cshtml",
               "RelativeDocumentMoniker": "EmergenceResponse.Web\\Areas\\Emergencies\\Pages\\Add.cshtml",
@@ -170,32 +238,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "CustomUserIdProvider.cs",
-              "DocumentMoniker": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Web\\Models\\CustomUserIdProvider.cs",
-              "RelativeDocumentMoniker": "EmergenceResponse.Web\\Models\\CustomUserIdProvider.cs",
-              "ToolTip": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Web\\Models\\CustomUserIdProvider.cs",
-              "RelativeToolTip": "EmergenceResponse.Web\\Models\\CustomUserIdProvider.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "20250425094051_voice-note-report.cs",
+              "DocumentMoniker": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Data\\Migrations\\20250425094051_voice-note-report.cs",
+              "RelativeDocumentMoniker": "EmergenceResponse.Data\\Migrations\\20250425094051_voice-note-report.cs",
+              "ToolTip": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Data\\Migrations\\20250425094051_voice-note-report.cs",
+              "RelativeToolTip": "EmergenceResponse.Data\\Migrations\\20250425094051_voice-note-report.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBQAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T07:13:49.719Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "EmergenceContext.cs",
-              "DocumentMoniker": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Data\\Entities\\EmergenceContext.cs",
-              "RelativeDocumentMoniker": "EmergenceResponse.Data\\Entities\\EmergenceContext.cs",
-              "ToolTip": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Data\\Entities\\EmergenceContext.cs",
-              "RelativeToolTip": "EmergenceResponse.Data\\Entities\\EmergenceContext.cs",
-              "ViewState": "AgIAAG4AAAAAAAAAAAAuwB0AAABIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-29T07:27:33.946Z",
+              "WhenOpened": "2025-04-25T09:40:51.887Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
+              "Title": "20240829075018_initial.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Data\\Migrations\\20240829075018_initial.Designer.cs",
+              "RelativeDocumentMoniker": "EmergenceResponse.Data\\Migrations\\20240829075018_initial.Designer.cs",
+              "ToolTip": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Data\\Migrations\\20240829075018_initial.Designer.cs",
+              "RelativeToolTip": "EmergenceResponse.Data\\Migrations\\20240829075018_initial.Designer.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAUwA0AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-25T09:39:17.654Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "EmergenceDbContext.cs",
               "DocumentMoniker": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Data\\Entities\\EmergenceDbContext.cs",
               "RelativeDocumentMoniker": "EmergenceResponse.Data\\Entities\\EmergenceDbContext.cs",
@@ -208,7 +277,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "_SysUser.cshtml",
               "DocumentMoniker": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Web\\Pages\\Shared\\Sidebar\\_SysUser.cshtml",
               "RelativeDocumentMoniker": "EmergenceResponse.Web\\Pages\\Shared\\Sidebar\\_SysUser.cshtml",
@@ -220,7 +289,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Web\\Program.cs",
               "RelativeDocumentMoniker": "EmergenceResponse.Web\\Program.cs",
@@ -232,19 +301,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Add.cshtml",
-              "DocumentMoniker": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Web\\Areas\\EmergencyReports\\Pages\\Add.cshtml",
-              "RelativeDocumentMoniker": "EmergenceResponse.Web\\Areas\\EmergencyReports\\Pages\\Add.cshtml",
-              "ToolTip": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Web\\Areas\\EmergencyReports\\Pages\\Add.cshtml",
-              "RelativeToolTip": "EmergenceResponse.Web\\Areas\\EmergencyReports\\Pages\\Add.cshtml",
-              "ViewState": "AgIAAGsAAAAAAAAAAAAkwHMAAABpAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-29T07:26:07.581Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Web\\Pages\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "EmergenceResponse.Web\\Pages\\Shared\\_Layout.cshtml",
@@ -256,7 +313,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 12,
               "Title": "CallHub.cs",
               "DocumentMoniker": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Web\\Models\\CallHub.cs",
               "RelativeDocumentMoniker": "EmergenceResponse.Web\\Models\\CallHub.cs",
@@ -268,7 +325,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Web\\Areas\\ServiceProviders\\Pages\\Index.cshtml",
               "RelativeDocumentMoniker": "EmergenceResponse.Web\\Areas\\ServiceProviders\\Pages\\Index.cshtml",
@@ -280,7 +337,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "AdminCall.cshtml",
               "DocumentMoniker": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Web\\Pages\\AdminCall.cshtml",
               "RelativeDocumentMoniker": "EmergenceResponse.Web\\Pages\\AdminCall.cshtml",
@@ -292,19 +349,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Add.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Web\\Areas\\EmergencyReports\\Pages\\Add.cshtml.cs",
-              "RelativeDocumentMoniker": "EmergenceResponse.Web\\Areas\\EmergencyReports\\Pages\\Add.cshtml.cs",
-              "ToolTip": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Web\\Areas\\EmergencyReports\\Pages\\Add.cshtml.cs",
-              "RelativeToolTip": "EmergenceResponse.Web\\Areas\\EmergencyReports\\Pages\\Add.cshtml.cs",
-              "ViewState": "AgIAAD0AAAAAAAAAAAAkwFQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-29T07:26:07.796Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "scaffold.txt",
               "DocumentMoniker": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Data\\scaffold.txt",
               "RelativeDocumentMoniker": "EmergenceResponse.Data\\scaffold.txt",
@@ -316,31 +361,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Web\\Areas\\EmergencyReports\\Pages\\Details.cshtml",
-              "RelativeDocumentMoniker": "EmergenceResponse.Web\\Areas\\EmergencyReports\\Pages\\Details.cshtml",
-              "ToolTip": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Web\\Areas\\EmergencyReports\\Pages\\Details.cshtml",
-              "RelativeToolTip": "EmergenceResponse.Web\\Areas\\EmergencyReports\\Pages\\Details.cshtml",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAAC0AAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-29T07:26:07.572Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Details.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Web\\Areas\\EmergencyReports\\Pages\\Details.cshtml.cs",
-              "RelativeDocumentMoniker": "EmergenceResponse.Web\\Areas\\EmergencyReports\\Pages\\Details.cshtml.cs",
-              "ToolTip": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Web\\Areas\\EmergencyReports\\Pages\\Details.cshtml.cs",
-              "RelativeToolTip": "EmergenceResponse.Web\\Areas\\EmergencyReports\\Pages\\Details.cshtml.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-29T07:26:07.478Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "Emergency.cs",
               "DocumentMoniker": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Data\\Entities\\Emergency.cs",
               "RelativeDocumentMoniker": "EmergenceResponse.Data\\Entities\\Emergency.cs",
@@ -352,7 +373,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "Direction.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Web\\Areas\\EmergencyReports\\Pages\\Direction.cshtml.cs",
               "RelativeDocumentMoniker": "EmergenceResponse.Web\\Areas\\EmergencyReports\\Pages\\Direction.cshtml.cs",
@@ -364,7 +385,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "_AnonymousView.cshtml",
               "DocumentMoniker": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Web\\Pages\\_AnonymousView.cshtml",
               "RelativeDocumentMoniker": "EmergenceResponse.Web\\Pages\\_AnonymousView.cshtml",
@@ -376,7 +397,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "site.css",
               "DocumentMoniker": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Web\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "EmergenceResponse.Web\\wwwroot\\css\\site.css",
@@ -388,7 +409,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "Direction.cshtml",
               "DocumentMoniker": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Web\\Areas\\EmergencyReports\\Pages\\Direction.cshtml",
               "RelativeDocumentMoniker": "EmergenceResponse.Web\\Areas\\EmergencyReports\\Pages\\Direction.cshtml",
@@ -400,7 +421,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Web\\Pages\\Index.cshtml",
               "RelativeDocumentMoniker": "EmergenceResponse.Web\\Pages\\Index.cshtml",
@@ -412,7 +433,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "secrets.json",
               "DocumentMoniker": "C:\\Users\\godkn\\AppData\\Roaming\\Microsoft\\UserSecrets\\edc337ad-80cb-468d-8619-f9db87d87dd5\\secrets.json",
               "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Roaming\\Microsoft\\UserSecrets\\edc337ad-80cb-468d-8619-f9db87d87dd5\\secrets.json",
@@ -424,7 +445,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "20240829075018_initial.cs",
               "DocumentMoniker": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Data\\Migrations\\20240829075018_initial.cs",
               "RelativeDocumentMoniker": "EmergenceResponse.Data\\Migrations\\20240829075018_initial.cs",
@@ -436,7 +457,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "EmergencyStatus.cs",
               "DocumentMoniker": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Lib\\EmergencyStatus.cs",
               "RelativeDocumentMoniker": "EmergenceResponse.Lib\\EmergencyStatus.cs",
@@ -448,7 +469,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "Activate.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Web\\Areas\\Identity\\Pages\\Account\\Activate.cshtml.cs",
               "RelativeDocumentMoniker": "EmergenceResponse.Web\\Areas\\Identity\\Pages\\Account\\Activate.cshtml.cs",
@@ -460,7 +481,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "Index.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Web\\Areas\\EmergencyReports\\Pages\\Index.cshtml.cs",
               "RelativeDocumentMoniker": "EmergenceResponse.Web\\Areas\\EmergencyReports\\Pages\\Index.cshtml.cs",
@@ -472,7 +493,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Web\\Areas\\EmergencyReports\\Pages\\Index.cshtml",
               "RelativeDocumentMoniker": "EmergenceResponse.Web\\Areas\\EmergencyReports\\Pages\\Index.cshtml",
@@ -484,7 +505,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 30,
               "Title": "secrets.json",
               "DocumentMoniker": "C:\\Users\\Windows Pc\\AppData\\Roaming\\Microsoft\\UserSecrets\\edc337ad-80cb-468d-8619-f9db87d87dd5\\secrets.json",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Windows Pc\\AppData\\Roaming\\Microsoft\\UserSecrets\\edc337ad-80cb-468d-8619-f9db87d87dd5\\secrets.json",
@@ -495,7 +516,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "EmergenceResponse.Lib.csproj",
               "DocumentMoniker": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Lib\\EmergenceResponse.Lib.csproj",
               "RelativeDocumentMoniker": "EmergenceResponse.Lib\\EmergenceResponse.Lib.csproj",
@@ -507,7 +528,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 31,
               "Title": "Emergency.cs",
               "DocumentMoniker": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Data\\Partials\\Emergency.cs",
               "RelativeDocumentMoniker": "EmergenceResponse.Data\\Partials\\Emergency.cs",

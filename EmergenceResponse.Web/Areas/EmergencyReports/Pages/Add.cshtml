@@ -239,19 +239,30 @@
                 audioChunks.push(event.data);
             };
 
-            mediaRecorder.onstop = function () {
-                const audioBlob = new Blob(audioChunks, { type: "audio/wav" });
-                const audioUrl = URL.createObjectURL(audioBlob);
+        mediaRecorder.onstop = function () {
+            const audioBlob = new Blob(audioChunks, { type: "audio/wav" });
+
+            // Convert Blob to base64
+            const reader = new FileReader();
+            reader.onloadend = function () {
+                // `reader.result` will contain the base64 string (data URL)
+                const audioData = reader.result;
+
+                // Set the base64 string (data URL) in the hidden input field
+                document.getElementById("audioData").value = audioData;
+
+                // Optionally: Display the audio file for playback
                 const audioPlayback = document.getElementById("audioPlayback");
-
-                audioPlayback.src = audioUrl;
+                audioPlayback.src = audioData;
                 audioPlayback.style.display = "block";
-                document.getElementById("audioData").value = audioBlob;
-
-                recordStatus.textContent = "Recording Stopped";
-                startButton.disabled = false;
-                stopButton.disabled = true;
             };
+            reader.readAsDataURL(audioBlob); // This converts the Blob to base64 (data URL)
+
+            // Update the UI after recording has stopped
+            recordStatus.textContent = "Recording Stopped";
+            startButton.disabled = false;
+            stopButton.disabled = true;
+        };
 
             mediaRecorder.start();
         });
