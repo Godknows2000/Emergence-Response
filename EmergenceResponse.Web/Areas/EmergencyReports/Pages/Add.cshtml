@@ -73,7 +73,7 @@
                         </div>
                         <div class="mb-3">
                             <label for="description" class="form-label">Description:</label>
-                            <textarea asp-for="Emergency.Description" class="form-control" id="description" rows="4" required></textarea>
+                            <textarea asp-for="Emergency.Description" class="form-control" id="description" rows="4"></textarea>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Record Emergency Report:</label>
@@ -107,12 +107,6 @@
 </div>
 
 @section Scripts{
-   @* <script>
-        navigator.geolocation.getCurrentPosition(position => {
-            const { latitude, longitude } = position.coords;
-            map.innerHTML = '<iframe width="700" height="300" src="https://maps.google.com/maps?q='+latitude+','+longitude+'&amp;z=15&amp;output=embed"></iframe>'
-        });
-    </script>*@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/3.1.7/signalr.min.js"></script>
     <script>
            const callButton = document.getElementById("callButton");
@@ -357,7 +351,7 @@
 
     </script>
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8358F9bbWt_IDpOAXqbDfwwYago-RPPk&callback=initMap" async defer></script>
 
 }
 

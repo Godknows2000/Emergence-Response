@@ -64,7 +64,7 @@ namespace EmergenceResponse.Web.Areas.EmergencyReports.Pages
 
         public async Task<Data.ServiceProvider> GetDistance(Location origin, Emergency em)
         {
-            var apiKey = "YOUR_GOOGLE_MAPS_API_KEY";  // Make sure this is set properly
+            var apiKey = "AIzaSyD8358F9bbWt_IDpOAXqbDfwwYago-RPPk";
             var dests = Db.ServiceProviders.Include(c => c.Location).Where(c => c.TypeId == em.TypeId).ToList();
 
             var distances = new List<double>();
@@ -81,14 +81,14 @@ namespace EmergenceResponse.Web.Areas.EmergencyReports.Pages
                     if (status != "OK")
                     {
                         Console.WriteLine($"Error with Distance Matrix API: {status}");
-                        continue; // Skip this destination if there's an error
+                        continue;
                     }
 
                     var rows = jsonResponse["rows"];
                     if (rows == null || rows.Count() == 0 || rows[0]["elements"] == null || rows[0]["elements"].Count() == 0)
                     {
                         Console.WriteLine("No valid distance found for this destination.");
-                        continue; // Skip this destination if there's no valid distance
+                        continue;
                     }
 
                     var distance = rows[0]["elements"][0]["distance"]["value"];

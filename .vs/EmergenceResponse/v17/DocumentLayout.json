@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6F207C1C-FD6E-45C8-AA36-574248ED95E7}|EmergenceResponse.Web\\EmergenceResponse.Web.csproj|c:\\users\\godkn\\documents\\github\\emergenceresponse\\emergenceresponse.web\\areas\\emergencyreports\\pages\\add.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F207C1C-FD6E-45C8-AA36-574248ED95E7}|EmergenceResponse.Web\\EmergenceResponse.Web.csproj|solutionrelative:emergenceresponse.web\\areas\\emergencyreports\\pages\\add.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F207C1C-FD6E-45C8-AA36-574248ED95E7}|EmergenceResponse.Web\\EmergenceResponse.Web.csproj|c:\\users\\godkn\\documents\\github\\emergenceresponse\\emergenceresponse.web\\areas\\emergencyreports\\pages\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6F207C1C-FD6E-45C8-AA36-574248ED95E7}|EmergenceResponse.Web\\EmergenceResponse.Web.csproj|solutionrelative:emergenceresponse.web\\areas\\emergencyreports\\pages\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Projects\\wCyber Solutions\\ASP.Net\\PropertyQuest\\PropertyQuest.Web\\Areas\\Maintenance\\Pages\\Inspections\\Details.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -15,14 +23,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{6F207C1C-FD6E-45C8-AA36-574248ED95E7}|EmergenceResponse.Web\\EmergenceResponse.Web.csproj|c:\\users\\godkn\\documents\\github\\emergenceresponse\\emergenceresponse.web\\areas\\emergencyreports\\pages\\details.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6F207C1C-FD6E-45C8-AA36-574248ED95E7}|EmergenceResponse.Web\\EmergenceResponse.Web.csproj|solutionrelative:emergenceresponse.web\\areas\\emergencyreports\\pages\\details.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6F207C1C-FD6E-45C8-AA36-574248ED95E7}|EmergenceResponse.Web\\EmergenceResponse.Web.csproj|c:\\users\\godkn\\documents\\github\\emergenceresponse\\emergenceresponse.web\\areas\\emergencyreports\\pages\\add.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F207C1C-FD6E-45C8-AA36-574248ED95E7}|EmergenceResponse.Web\\EmergenceResponse.Web.csproj|solutionrelative:emergenceresponse.web\\areas\\emergencyreports\\pages\\add.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6F207C1C-FD6E-45C8-AA36-574248ED95E7}|EmergenceResponse.Web\\EmergenceResponse.Web.csproj|c:\\users\\godkn\\documents\\github\\emergenceresponse\\emergenceresponse.web\\areas\\emergencyreports\\pages\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6F207C1C-FD6E-45C8-AA36-574248ED95E7}|EmergenceResponse.Web\\EmergenceResponse.Web.csproj|solutionrelative:emergenceresponse.web\\areas\\emergencyreports\\pages\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FF90DFDF-0347-4345-B352-E4B179ECA0E7}|EmergenceResponse.Data\\EmergenceResponse.Data.csproj|c:\\users\\godkn\\documents\\github\\emergenceresponse\\emergenceresponse.data\\migrations\\20250425094051_voice-note-report.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -142,7 +142,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -154,25 +154,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Details.cshtml.cs",
               "DocumentMoniker": "D:\\Projects\\wCyber Solutions\\ASP.Net\\PropertyQuest\\PropertyQuest.Web\\Areas\\Maintenance\\Pages\\Inspections\\Details.cshtml.cs",
               "ToolTip": "D:\\Projects\\wCyber Solutions\\ASP.Net\\PropertyQuest\\PropertyQuest.Web\\Areas\\Maintenance\\Pages\\Inspections\\Details.cshtml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T06:48:06.501Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-28T06:48:06.501Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Add.cshtml.cs",
               "DocumentMoniker": "D:\\Projects\\wCyber Solutions\\ASP.Net\\PropertyQuest\\PropertyQuest.Web\\Areas\\Maintenance\\Pages\\Inspections\\CheckList\\Add.cshtml.cs",
               "ToolTip": "D:\\Projects\\wCyber Solutions\\ASP.Net\\PropertyQuest\\PropertyQuest.Web\\Areas\\Maintenance\\Pages\\Inspections\\CheckList\\Add.cshtml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T06:48:03.768Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-28T06:48:03.768Z"
             },
             {
               "$type": "Document",
@@ -200,31 +198,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Add.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Web\\Areas\\EmergencyReports\\Pages\\Add.cshtml.cs",
               "RelativeDocumentMoniker": "EmergenceResponse.Web\\Areas\\EmergencyReports\\Pages\\Add.cshtml.cs",
               "ToolTip": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Web\\Areas\\EmergencyReports\\Pages\\Add.cshtml.cs",
               "RelativeToolTip": "EmergenceResponse.Web\\Areas\\EmergencyReports\\Pages\\Add.cshtml.cs",
-              "ViewState": "AgIAAEEAAAAAAAAAAIAwwEwAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAEgAAAAAAAAAAIAwwFoAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-29T07:26:07.796Z"
+              "WhenOpened": "2024-08-29T07:26:07.796Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "Add.cshtml",
               "DocumentMoniker": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Web\\Areas\\EmergencyReports\\Pages\\Add.cshtml",
               "RelativeDocumentMoniker": "EmergenceResponse.Web\\Areas\\EmergencyReports\\Pages\\Add.cshtml",
               "ToolTip": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Web\\Areas\\EmergencyReports\\Pages\\Add.cshtml",
               "RelativeToolTip": "EmergenceResponse.Web\\Areas\\EmergencyReports\\Pages\\Add.cshtml",
-              "ViewState": "AgIAANoAAAAAAAAAAAAkwAgBAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAFgBAAAAAAAAAAAAAGEBAABkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-29T07:26:07.581Z"
+              "WhenOpened": "2024-08-29T07:26:07.581Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Web\\Areas\\EmergencyReports\\Pages\\Details.cshtml",
               "RelativeDocumentMoniker": "EmergenceResponse.Web\\Areas\\EmergencyReports\\Pages\\Details.cshtml",
@@ -232,12 +232,11 @@
               "RelativeToolTip": "EmergenceResponse.Web\\Areas\\EmergencyReports\\Pages\\Details.cshtml",
               "ViewState": "AgIAADYAAAAAAAAAAAAwwDYAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-29T07:26:07.572Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-29T07:26:07.572Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Details.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\godkn\\Documents\\GitHub\\EmergenceResponse\\EmergenceResponse.Web\\Areas\\EmergencyReports\\Pages\\Details.cshtml.cs",
               "RelativeDocumentMoniker": "EmergenceResponse.Web\\Areas\\EmergencyReports\\Pages\\Details.cshtml.cs",
