@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EmergenceResponse.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+84560aea59987673e5a911d10d7cb7f8978d4435")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5d79925b36fce0289448969afc604bfd1d99cc63")]
 [assembly: System.Reflection.AssemblyProductAttribute("EmergenceResponse.Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EmergenceResponse.Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

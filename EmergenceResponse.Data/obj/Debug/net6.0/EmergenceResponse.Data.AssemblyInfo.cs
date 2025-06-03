@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EmergenceResponse.Data")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+693646cef1e14ba1511dfd1484ecdaf710c20274")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5d79925b36fce0289448969afc604bfd1d99cc63")]
 [assembly: System.Reflection.AssemblyProductAttribute("EmergenceResponse.Data")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EmergenceResponse.Data")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
