@@ -1,71 +1,146 @@
 ﻿@page
 @model AddModel
 
- <div class="card shadow">
-    <div class="card-body">
-        <form method="post">             
-            <div class="col-md">
-                <div class="mb-3">
-                    <label class="form-label">Name:</label>
-                    <input asp-for="ServiceProvider.Name" class="form-control">
-                    <span asp-validation-for="ServiceProvider.Email" class="text-danger"></span>
-                </div>
-            </div>
-            <div class="col-md">
-                <div class="mb-3">
-                    <label class="form-label">Email:</label>
-                    <input asp-for="ServiceProvider.Email" class="form-control">
-                    <span asp-validation-for="ServiceProvider.Email" class="text-danger"></span>
-                </div>
-            </div>
-             <div class="mb-3">
-                <label class="form-label">Description:</label>
-                <textarea asp-for="ServiceProvider.Description" class="form-control"  rows="3"></textarea>
-            </div>
-            <div class="mb-3">
-                <label for="description" class="form-label">Emergency:</label>                  
-                <select asp-for="ServiceProvider.Type" class="form-select" asp-items="@Html.GetListItems<EmergencyType>()">
-                       
-                </select>
-                <span asp-validation-for="ServiceProvider.Type" class="text-danger"></span>
-            </div>
+<div class="container py-3">
+    <h1 class="text-center mb-4">Add Service Provider</h1>
 
-             <div class="row">
-                  <div class="col-md">
-                      <div class="mb-3">
-                        <label for="location" class="form-label">Longitude:</label>
-                        <input asp-for="Location.Longitude" class="form-control" id="longitude" required>
-                      </div>
-                  </div>
-                  <div class="col-md">
-                      <div class="mb-3">
-                        <label for="location" class="form-label">Latitude:</label>
-                        <input asp-for="Location.Latitude" class="form-control" id="latitude" required>
-                      </div>
-                  </div>
-              </div>            
-                <div class="row">
-                    <div class="col-md">
+    <div class="row">
+        <div class="col-md-6">
+            <div id="map" style="height: 500px"></div>
+        </div>
+        <div class="col-md-6">
+            <div class="card shadow">
+                <div class="card-body">
+                    <form method="post">
+                        <div class="col-md">
+                            <div class="mb-3">
+                                <label class="form-label">Name:</label>
+                                <input asp-for="ServiceProvider.Name" class="form-control">
+                                <span asp-validation-for="ServiceProvider.Name" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md">
+                            <div class="mb-3">
+                                <label class="form-label">Email:</label>
+                                <input asp-for="ServiceProvider.Email" class="form-control">
+                                <span asp-validation-for="ServiceProvider.Email" class="text-danger"></span>
+                            </div>
+                        </div>
                         <div class="mb-3">
-                            <label for="location" class="form-label">City:</label>
-                            <input asp-for="Location.City" class="form-control" id="city" required>
-                          </div>
-                         
-                    </div>
-                    <div class="col-md">
-                         <div class="mb-3">
-                            <label for="location" class="form-label">Address:</label>
-                            <textarea asp-for="Location.Address" class="form-control" rows="2" required></textarea>
-                          </div>
-                    </div>
+                            <label class="form-label">Description:</label>
+                            <textarea asp-for="ServiceProvider.Description" class="form-control" rows="3"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="description" class="form-label">Emergency:</label>
+                            <select asp-for="ServiceProvider.Type" class="form-select" asp-items="@Html.GetListItems<EmergencyType>()">
+                            </select>
+                            <span asp-validation-for="ServiceProvider.Type" class="text-danger"></span>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md">
+                                <div class="mb-3">
+                                    <label for="location" class="form-label">Longitude:</label>
+                                    <input asp-for="Location.Longitude" class="form-control" id="longitude" readonly>
+                                </div>
+                            </div>
+                            <div class="col-md">
+                                <div class="mb-3">
+                                    <label for="location" class="form-label">Latitude:</label>
+                                    <input asp-for="Location.Latitude" class="form-control" id="latitude" readonly>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md">
+                                <div class="mb-3">
+                                    <label for="location" class="form-label">City:</label>
+                                    <input asp-for="Location.City" class="form-control" id="city" readonly>
+                                </div>
+                            </div>
+                            <div class="col-md">
+                                <div class="mb-3">
+                                    <label for="location" class="form-label">Address:</label>
+                                    <textarea asp-for="Location.Address" class="form-control" rows="2"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-footer text-end">
+                            <button type="submit" class="btn btn-success text-end">Submit Report</button>
+                        </div>
+                    </form>
                 </div>
-   
-            <div class="card-footer text-end">
-                <button type="submit" class="btn btn-success text-end">Submit Report</button>
             </div>
-              
-        </form>
+        </div>
     </div>
 </div>
 
-@section sidebar{}
+@section Scripts {
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8358F9bbWt_IDpOAXqbDfwwYago-RPPk&callback=initMap" async defer></script>
+    <script>
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: 0, lng: 0},
+                zoom: 15
+            });
+
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    var pos = {
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude
+                    };
+
+                    $('#longitude').val(pos.lng);
+                    $('#latitude').val(pos.lat);
+                    getCityName(pos.lat, pos.lng);
+
+                    var marker = new google.maps.Marker({
+                        position: pos,
+                        map: map,
+                        title: 'Current Location'
+                    });
+                    map.setCenter(pos);
+                }, function() {
+                    handleLocationError(true, infoWindow, map.getCenter());
+                });
+            } else {
+                handleLocationError(false, infoWindow, map.getCenter());
+            }
+        }
+
+        function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+            infoWindow.setPosition(pos);
+            infoWindow.setContent(browserHasGeolocation ?
+                                'Error: The Geolocation service failed.' :
+                                'Error: Your browser doesn\'t support geolocation.');
+            infoWindow.open(map);
+        }
+
+        function getCityName(lat, lng) {
+            var geocoder = new google.maps.Geocoder();
+            var latlng = new google.maps.LatLng(lat, lng);
+            geocoder.geocode({'latLng': latlng}, function(results, status) {
+                if (status == google.maps.GeocoderStatus.OK) {
+                    if (results[0]) {
+                        var address = results[0].formatted_address;
+                        for (var i = 0; i < results[0].address_components.length; i++) {
+                            var component = results[0].address_components[i];
+                            if (component.types.indexOf('locality') > -1) {
+                                var cityName = component.long_name;
+                                $('#city').val(cityName);
+                                $('#address').val(address);
+                                return;
+                            }
+                        }
+                    } else {
+                        console.log('No results found');
+                    }
+                } else {
+                    console.log('Geocoder failed due to: ' + status);
+                }
+            });
+        }
+    </script>
+}

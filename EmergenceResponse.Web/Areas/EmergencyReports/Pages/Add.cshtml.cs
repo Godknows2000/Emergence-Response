@@ -106,10 +106,7 @@ namespace EmergenceResponse.Web.Areas.EmergencyReports.Pages
             em.ServiceProviderId = sp.Id;
             em.StatusId = (int)EmergencyStatus.ASSIGNED;
 
-            if (await TryUpdateModelAsync(em, nameof(Emergency), c => c.ServiceProviderId, c => c.StatusId))
-            {
-                await Db.SaveChangesAsync();
-            }
+            await Db.SaveChangesAsync();
 
             return sp;
         }
