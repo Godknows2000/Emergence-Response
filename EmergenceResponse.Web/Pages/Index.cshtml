@@ -1,16 +1,51 @@
 ﻿@page
 @using EmergenceResponse.Lib
+@using static EmergenceResponse.Web.Pages.IndexModel
 @model IndexModel
+@inject Microsoft.AspNetCore.Mvc.Rendering.IJsonHelper Json
+
 @{
-    ViewData["Title"] = "Home page";
+    var categoryData = new List<ChartDataPoint>();
+    var dateData = new List<ChartDataPoint>();
+    var statusData = new List<ChartDataPoint>();
+
+    if (User.Identity.IsAuthenticated && Model.Emergencies != null)
+    {
+        categoryData = Model.Emergencies
+            .GroupBy(e => e.Type)
+            .Select(g => new ChartDataPoint
+                    {
+                        Label = g.Key.ToString(),
+                        Count = g.Count()
+                    })
+            .ToList();
+
+        dateData = Model.Emergencies
+            .GroupBy(e => e.CreationDate.Date)
+            .OrderBy(g => g.Key)
+            .Select(g => new ChartDataPoint
+                    {
+                        Label = g.Key.ToString("yyyy-MM-dd"),
+                        Count = g.Count()
+                    })
+            .ToList();
+
+        statusData = Model.Emergencies
+        .GroupBy(e => e.Status)
+        .Select(g => new ChartDataPoint
+        {
+            Label = g.Key.ToString(), // convert enum to string name
+            Count = g.Count()
+        })
+        .ToList();
+    }
 }
 
 @if (User.Identity.IsAuthenticated)
 {
-    <div class="container">
-    
+
     <div class="row">
-        <div class="offset-md-1 col-md-10">
+        <div class="col-md-12">
             @if(Model.CurrentUser.MemberId != null)
             {
                 <div class="row mb-3">
@@ -91,13 +126,105 @@
             </table>
         </div>
         }
+
+        @if (User.Identity.IsAuthenticated){
+            <h5>Administrator Dashboard</h5>
+            <div class="mt-4">
+                <!-- Area chart full width -->
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <div class="card shadow">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Emergencies Over Time</h5>
+                                        <div id="areaChart" class="w-100 h-100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pie + Bar charts row -->
+                <div class="row">
+                    <div class="col-6">
+                        <div class="card shadow">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Emergency Status</h5>
+                                        <div id="categoryPie" class="w-100 h-100"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+                        <div class="card shadow">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Emergency Categories</h5>
+                                        <div id="categoryBar" class="w-100 h-100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
             
         </div>
     </div>
-</div>
+
 }
 else{
     <partial name="_AnonymousView" />
 }
 
+@section Scripts{
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script>
+        // Area chart for Emergencies Over Time
+        var areaOptions = {
+          chart: {
+            type: 'area',
+            height: 250,
+            zoom: { enabled: true }
+          },
+          series: [{
+            name: 'Emergencies',
+            data: @Html.Raw(Json.Serialize(dateData.Select(d => d.Count)))
+          }],
+          xaxis: {
+            categories: @Html.Raw(Json.Serialize(dateData.Select(d => d.Label))),
+            title: { text: 'Date' }
+          },
+          dataLabels: { enabled: false },
+          stroke: { curve: 'smooth' },
+          title: { text: 'Emergencies Over Time', align: 'center' }
+        };
+        new ApexCharts(document.querySelector("#areaChart"), areaOptions).render();
+
+        // Pie chart for Emergency Categories
+        var pieOptions = {
+          chart: {
+            type: 'pie',
+            height: 250,
+            width: '100%'
+          },
+          labels: @Html.Raw(Json.Serialize(statusData.Select(d => d.Label))),
+          series: @Html.Raw(Json.Serialize(statusData.Select(d => d.Count))),
+          title: { text: 'Emergencies by Status' }
+        };
+        new ApexCharts(document.querySelector("#categoryPie"), pieOptions).render();
+
+        // Bar chart for Emergency Categories
+        var barOptions = {
+          chart: { type: 'bar', height: 240 },
+          series: [{
+            name: 'Count',
+            data: @Html.Raw(Json.Serialize(categoryData.Select(d => d.Count)))
+          }],
+          xaxis: {
+            categories: @Html.Raw(Json.Serialize(categoryData.Select(d => d.Label))),
+            title: { text: 'Category' }
+          },
+          title: { text: 'Emergency Categories - Bar Chart', align: 'center' }
+        };
+        new ApexCharts(document.querySelector("#categoryBar"), barOptions).render();
+    </script>
+
+}
 

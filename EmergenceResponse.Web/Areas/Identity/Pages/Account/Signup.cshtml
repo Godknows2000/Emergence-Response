@@ -6,64 +6,73 @@
     <h3 class="text-center mt-4">Create new account</h3>
     <form method="post">
         <div class="card shadow mb-5">
-        <div class="card-header">
-            <h5>Personal information</h5>
-        </div>
-        <div class="card-body">
-                
-            <div class="row mb-3">
-                <label class="col-md-4 form-label">Forename(s)</label>                  
-               
-                <div class="col-md-8">
-                    <input asp-for="Member.Forename" class="form-control"/>
+            <div class="card-header">
+                <h5>Personal information</h5>
+            </div>
+            <div class="card-body">
+
+                <div class="row mb-3">
+                    <label class="col-md-4 form-label">Forename(s)</label>
+                    <div class="col-md-8">
+                        <input asp-for="Member.Forename" class="form-control" />
+                        <span asp-validation-for="Member.Forename" class="text-danger"></span>
+                    </div>
                 </div>
-                    
+
+                <div class="row mb-3">
+                    <label class="col-md-4 form-label">Surname</label>
+                    <div class="col-md-8">
+                        <input asp-for="Member.Surname" class="form-control" />
+                        <span asp-validation-for="Member.Surname" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label class="col-md-4 form-label">Email</label>
+                    <div class="col-md-8">
+                        <input asp-for="Member.Email" class="form-control" />
+                        <span asp-validation-for="Member.Email" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label class="col-md-4 form-label">Phone</label>
+                    <div class="col-md-8">
+                        <input asp-for="Member.Phone" class="form-control" />
+                        <span asp-validation-for="Member.Phone" class="text-danger"></span>
+                    </div>
+                </div>
+
             </div>
-            <div class="row mb-3">
-                    <label class="col-md-4 form-label">Surname</label>                  
-               
-                <div class="col-md-8">
-                    <input asp-for="Member.Surname" class="form-control"/>
+
+            <div class="card-header">
+                <h5>Account information</h5>
+            </div>
+            <div class="card-body">
+                <div class="row mb-3">
+                    <label class="col-md-4 form-label">Password</label>
+                    <div class="col-md-8">
+                        <input asp-for="Password" type="password" class="form-control" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label class="col-md-4 form-label">Confirm Password</label>
+                    <div class="col-md-8">
+                        <input asp-for="ConfirmPassword" type="password" class="form-control" />
+                        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                    </div>
                 </div>
             </div>
-            <div class="row mb-3">
-                <label class="col-md-4 form-label">Email</label>                                
-                <div class="col-md-8">
-                    <input asp-for="Member.Email" class="form-control"/>
-                </div>                   
-            </div>
-            <div class="row mb-3">
-                <label class="col-md-4 form-label">Phone</label>                                
-                <div class="col-md-8">
-                    <input asp-for="Member.Phone" class="form-control"/>
-                </div>
-                    
-            </div>
-                
-        </div>
-        <div class="card-header">
-            <h5>Account information</h5>
-        </div>
-        <div class="card-body">
-            <div class="row mb-3">
-                <label class="col-md-4 form-label">Password</label>                                
-                <div class="col-md-8">
-                    <input type="password" class="form-control" name="password"/>
-                </div>                   
-            </div>
-            <div class="row mb-3">
-                <label class="col-md-4 form-label" name="confirm_password">Confirm password</label>                                
-                <div class="col-md-8">
-                    <input type="password" class="form-control"/>
-                </div>
-                    
+
+            <div class="card-footer text-end">
+                <button class="btn btn-success" type="submit">Save</button>
             </div>
         </div>
-        <div class="card-footer text-end">
-            <button class="btn btn-success">Save</button>
-        </div>
-    </div>
     </form>
-    
 </div>
 
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
