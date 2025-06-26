@@ -92,7 +92,7 @@
             </div>
             }
                 
-        @if (User.Identity.IsAuthenticated && Model.CurrentUser.MemberId != null)
+            @if (User.Identity.IsAuthenticated && Model.CurrentUser.MemberId != null)
         {
             <div class="card shadow">
                 <div class="d-flex">
@@ -127,7 +127,8 @@
         </div>
         }
 
-        @if (User.Identity.IsAuthenticated){
+            @if (User.Identity.IsAuthenticated && Model.CurrentUser.MemberId == null)
+            {
             <h5>Administrator Dashboard</h5>
             <div class="mt-4">
                 <!-- Area chart full width -->
